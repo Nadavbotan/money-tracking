@@ -1,5 +1,89 @@
 [
   {
+    "id": "bank-expense-20260401-_-400",
+    "date": "2026-04-01",
+    "merchant": "שר נועה",
+    "amount": 400,
+    "charged_amount": 400,
+    "currency": "ILS",
+    "category": "transfers",
+    "card": "bank",
+    "source": "local",
+    "type": "expense",
+    "transaction_type": "regular",
+    "reference": "451275523"
+  },
+  {
+    "id": "bank-rent-20260401-rent-7085",
+    "date": "2026-04-01",
+    "merchant": "שכר דירה",
+    "amount": 7085,
+    "charged_amount": 7085,
+    "currency": "ILS",
+    "category": "rent",
+    "card": "bank",
+    "source": "local",
+    "type": "expense",
+    "transaction_type": "regular",
+    "reference": "10130"
+  },
+  {
+    "id": "bank-expense-20260403-_-1192.34",
+    "date": "2026-04-03",
+    "merchant": "מקס איט פיננסי",
+    "amount": 1192.34,
+    "charged_amount": 1192.34,
+    "currency": "ILS",
+    "category": "fees",
+    "card": "bank",
+    "source": "local",
+    "type": "expense",
+    "transaction_type": "regular",
+    "reference": "34685693"
+  },
+  {
+    "id": "bank-expense-20260403-_-5500",
+    "date": "2026-04-03",
+    "merchant": "ספיר אלון ושושנה",
+    "amount": 5500,
+    "charged_amount": 5500,
+    "currency": "ILS",
+    "category": "transfers",
+    "card": "bank",
+    "source": "local",
+    "type": "expense",
+    "transaction_type": "regular",
+    "reference": "451404264"
+  },
+  {
+    "id": "bank-expense-20260403-_-7085",
+    "date": "2026-04-03",
+    "merchant": "הפקדה לפקדון",
+    "amount": 7085,
+    "charged_amount": 7085,
+    "currency": "ILS",
+    "category": "transfers",
+    "card": "bank",
+    "source": "local",
+    "type": "expense",
+    "transaction_type": "regular",
+    "reference": "2609285502413"
+  },
+  {
+    "id": "bank-expense-20260403-_-400",
+    "date": "2026-04-03",
+    "merchant": "הפקדה לפקדון",
+    "amount": 400,
+    "charged_amount": 400,
+    "currency": "ILS",
+    "category": "transfers",
+    "card": "bank",
+    "source": "local",
+    "type": "expense",
+    "transaction_type": "regular",
+    "reference": "2609285502400"
+  },
+  {
     "id": "9143-20260409-_-39.9",
     "date": "2026-04-09",
     "merchant": "ניצת הדובדבן הוד השרון",
@@ -68,6 +152,20 @@
     "type": "expense",
     "transaction_type": "regular",
     "reference": "05326106100005008187725"
+  },
+  {
+    "id": "bank-expense-20260409-_-1500",
+    "date": "2026-04-09",
+    "merchant": "משיכת מזומן",
+    "amount": 1500,
+    "charged_amount": 1500,
+    "currency": "ILS",
+    "category": "other",
+    "card": "bank",
+    "source": "local",
+    "type": "expense",
+    "transaction_type": "regular",
+    "reference": "9143"
   },
   {
     "id": "9143-20260410-_208-322.52",
@@ -574,6 +672,20 @@
     "reference": "75326106104001751559706"
   },
   {
+    "id": "bank-expense-20260414-_-600",
+    "date": "2026-04-14",
+    "merchant": "הראל קרן השתלמות",
+    "amount": 600,
+    "charged_amount": 600,
+    "currency": "ILS",
+    "category": "insurance",
+    "card": "bank",
+    "source": "local",
+    "type": "expense",
+    "transaction_type": "regular",
+    "reference": "453412355"
+  },
+  {
     "id": "9143-20260415-kisu-370",
     "date": "2026-04-15",
     "merchant": "KISU",
@@ -670,6 +782,20 @@
     "type": "expense",
     "transaction_type": "regular",
     "reference": "05326106106005224702954"
+  },
+  {
+    "id": "bank-expense-20260415-_-380",
+    "date": "2026-04-15",
+    "merchant": "וועד בית",
+    "amount": 380,
+    "charged_amount": 380,
+    "currency": "ILS",
+    "category": "utilities",
+    "card": "bank",
+    "source": "local",
+    "type": "expense",
+    "transaction_type": "regular",
+    "reference": "123777"
   },
   {
     "id": "9143-20260416-_-19.2",
@@ -810,6 +936,20 @@
     "type": "expense",
     "transaction_type": "regular",
     "reference": "15100466109309097688217"
+  },
+  {
+    "id": "bank-expense-20260417-_-400",
+    "date": "2026-04-17",
+    "merchant": "שר נועה",
+    "amount": 400,
+    "charged_amount": 400,
+    "currency": "ILS",
+    "category": "transfers",
+    "card": "bank",
+    "source": "local",
+    "type": "expense",
+    "transaction_type": "regular",
+    "reference": "454187830"
   },
   {
     "id": "9143-20260418-_-34",

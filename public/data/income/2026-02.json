@@ -1,0 +1,30 @@
+[
+  {
+    "id": "bank-income-20260227-_-7085",
+    "date": "2026-02-27",
+    "merchant": "משיכת פקדון",
+    "amount": 7085,
+    "charged_amount": 7085,
+    "currency": "ILS",
+    "category": "other_income",
+    "card": "bank",
+    "source": "local",
+    "type": "income",
+    "transaction_type": "regular",
+    "reference": "2605685504029"
+  },
+  {
+    "id": "bank-income-20260220-_-115",
+    "date": "2026-02-20",
+    "merchant": "קצבת ילדים",
+    "amount": 115,
+    "charged_amount": 115,
+    "currency": "ILS",
+    "category": "child_benefit",
+    "card": "bank",
+    "source": "local",
+    "type": "income",
+    "transaction_type": "regular",
+    "reference": "13104088"
+  }
+]

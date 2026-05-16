@@ -1,0 +1,72 @@
+[
+  {
+    "id": "bank-income-20260508-_-1520",
+    "date": "2026-05-08",
+    "merchant": "נדב חכמוב",
+    "amount": 1520,
+    "charged_amount": 1520,
+    "currency": "ILS",
+    "category": "other_income",
+    "card": "bank",
+    "source": "local",
+    "type": "income",
+    "transaction_type": "regular",
+    "reference": "1007838395752"
+  },
+  {
+    "id": "bank-income-20260505-_-1300",
+    "date": "2026-05-05",
+    "merchant": "הפקדת מזומן",
+    "amount": 1300,
+    "charged_amount": 1300,
+    "currency": "ILS",
+    "category": "other_income",
+    "card": "bank",
+    "source": "local",
+    "type": "income",
+    "transaction_type": "regular",
+    "reference": "4330"
+  },
+  {
+    "id": "bank-income-20260504-_-2600",
+    "date": "2026-05-04",
+    "merchant": "הכנסה מעסק ספיר",
+    "amount": 2600,
+    "charged_amount": 2600,
+    "currency": "ILS",
+    "category": "salary",
+    "card": "bank",
+    "source": "local",
+    "type": "income",
+    "transaction_type": "regular",
+    "reference": "456848660"
+  },
+  {
+    "id": "bank-income-20260501-_-31470.2",
+    "date": "2026-05-01",
+    "merchant": "מנדיי.קום - משכורת נדב",
+    "amount": 31470.2,
+    "charged_amount": 31470.2,
+    "currency": "ILS",
+    "category": "salary",
+    "card": "bank",
+    "source": "local",
+    "type": "income",
+    "transaction_type": "regular",
+    "reference": "42814012"
+  },
+  {
+    "id": "bank-income-20260501-_-5701.25",
+    "date": "2026-05-01",
+    "merchant": "עובדי מדינה - משכורת ספיר",
+    "amount": 5701.25,
+    "charged_amount": 5701.25,
+    "currency": "ILS",
+    "category": "salary",
+    "card": "bank",
+    "source": "local",
+    "type": "income",
+    "transaction_type": "regular",
+    "reference": "4170049"
+  }
+]

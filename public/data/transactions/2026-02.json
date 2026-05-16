@@ -1232,6 +1232,20 @@
     "reference": "75209506059004138726921"
   },
   {
+    "id": "bank-expense-20260227-_-400",
+    "date": "2026-02-27",
+    "merchant": "שר נועה",
+    "amount": 400,
+    "charged_amount": 400,
+    "currency": "ILS",
+    "category": "transfers",
+    "card": "bank",
+    "source": "local",
+    "type": "expense",
+    "transaction_type": "regular",
+    "reference": "445777732"
+  },
+  {
     "id": "9143-20260228-kiwicom-518.16",
     "date": "2026-02-28",
     "merchant": "KIWI.COM",
