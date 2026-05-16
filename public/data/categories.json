@@ -1,0 +1,25 @@
+{
+  "expenses": [
+    { "key": "groceries", "name": "Groceries", "nameHe": "מכולת", "icon": "ShoppingCart", "color": "#4CAF50" },
+    { "key": "dining", "name": "Dining & Cafes", "nameHe": "אוכל בחוץ", "icon": "Coffee", "color": "#FF9800" },
+    { "key": "transport", "name": "Gas & Transport", "nameHe": "דלק ותחבורה", "icon": "Car", "color": "#2196F3" },
+    { "key": "utilities", "name": "Utilities", "nameHe": "חשבונות", "icon": "Zap", "color": "#9C27B0" },
+    { "key": "insurance", "name": "Insurance & Health", "nameHe": "ביטוח ובריאות", "icon": "Shield", "color": "#E91E63" },
+    { "key": "kids", "name": "Kids & Family", "nameHe": "ילדים ומשפחה", "icon": "Baby", "color": "#00BCD4" },
+    { "key": "pets", "name": "Pets", "nameHe": "חיות מחמד", "icon": "PawPrint", "color": "#795548" },
+    { "key": "shopping", "name": "Shopping", "nameHe": "קניות", "icon": "ShoppingBag", "color": "#F44336" },
+    { "key": "subscriptions", "name": "Subscriptions", "nameHe": "מנויים", "icon": "Repeat", "color": "#673AB7" },
+    { "key": "travel", "name": "Travel & Hotels", "nameHe": "טיולים ומלונות", "icon": "Plane", "color": "#009688" },
+    { "key": "donations", "name": "Donations", "nameHe": "תרומות", "icon": "Heart", "color": "#FF5722" },
+    { "key": "parking", "name": "Parking", "nameHe": "חניה", "icon": "ParkingCircle", "color": "#607D8B" },
+    { "key": "transfers", "name": "Transfers", "nameHe": "העברות", "icon": "ArrowRightLeft", "color": "#3F51B5" },
+    { "key": "fees", "name": "Card Fees", "nameHe": "עמלות", "icon": "CreditCard", "color": "#9E9E9E" },
+    { "key": "other", "name": "Other", "nameHe": "אחר", "icon": "MoreHorizontal", "color": "#757575" }
+  ],
+  "income": [
+    { "key": "salary", "name": "Salary", "nameHe": "משכורת", "icon": "Banknote", "color": "#4CAF50" },
+    { "key": "freelance", "name": "Freelance", "nameHe": "פרילנס", "icon": "Laptop", "color": "#2196F3" },
+    { "key": "refunds", "name": "Refunds", "nameHe": "החזרים", "icon": "RotateCcw", "color": "#FF9800" },
+    { "key": "other_income", "name": "Other Income", "nameHe": "הכנסה אחרת", "icon": "Plus", "color": "#9C27B0" }
+  ]
+}

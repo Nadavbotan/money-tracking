@@ -9,7 +9,7 @@ import type {
   MonthlySummary,
 } from "./types";
 
-const DATA_DIR = path.join(process.cwd(), "..", "data");
+const DATA_DIR = path.join(process.cwd(), "public", "data");
 
 function readJSON<T>(filePath: string, fallback: T): T {
   try {
