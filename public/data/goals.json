@@ -1,0 +1,54 @@
+{
+  "financialGoals": [
+    {
+      "id": "stocks-2026",
+      "title": "השקעות במניות",
+      "description": "להוסיף 40,000₪ לתיק ההשקעות השנה",
+      "target": 40000,
+      "current": 0,
+      "unit": "ILS",
+      "icon": "TrendingUp",
+      "color": "#10B981",
+      "sources": [
+        { "name": "ESPP (2,950₪/חודש)", "monthly": 2950, "type": "auto" },
+        { "name": "העברות ידניות", "monthly": 0, "type": "manual" }
+      ],
+      "startBalance": 107000,
+      "note": "יעד: 147,000₪ בסוף 2026"
+    },
+    {
+      "id": "trip-fund",
+      "title": "קרן טיול",
+      "description": "חיסכון לטיול משפחתי",
+      "target": 30000,
+      "current": 10000,
+      "unit": "ILS",
+      "icon": "Plane",
+      "color": "#6366F1",
+      "sources": [],
+      "note": "מקסיקו / מדגסקר 2026"
+    },
+    {
+      "id": "ido-savings",
+      "title": "חיסכון לעידו",
+      "description": "400₪ כל חודש בצד",
+      "target": 4800,
+      "current": 0,
+      "unit": "ILS",
+      "icon": "Baby",
+      "color": "#F59E0B",
+      "sources": [
+        { "name": "הפקדה לפיקדון", "monthly": 400, "type": "auto" }
+      ],
+      "note": "מועבר כל כמה חודשים לחשבון השקעות"
+    }
+  ],
+  "aspirations": [
+    {
+      "id": "aim-high",
+      "title": "מכוונים גבוהה",
+      "items": []
+    }
+  ],
+  "lastUpdated": "2026-05-17"
+}
