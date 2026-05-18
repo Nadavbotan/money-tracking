@@ -2,12 +2,13 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { LayoutDashboard, List, TrendingUp } from "lucide-react";
+import { LayoutDashboard, List, TrendingUp, Target } from "lucide-react";
 
 const links = [
   { href: "/", label: "Overview", icon: LayoutDashboard },
   { href: "/transactions", label: "Transactions", icon: List },
   { href: "/trends", label: "Trends", icon: TrendingUp },
+  { href: "/goals", label: "Goals", icon: Target },
 ];
 
 export function Navigation() {
