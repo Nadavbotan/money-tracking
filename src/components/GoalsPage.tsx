@@ -91,7 +91,7 @@ function ProgressRing({ percentage, color, size = 80 }: { percentage: number; co
 
 function GoalCard({ goal }: { goal: FinancialGoal }) {
   const Icon = iconMap[goal.icon] || Target;
-  const percentage = (goal.current / goal.target) * 100;
+  const percentage = goal.target > 0 ? (goal.current / goal.target) * 100 : 0;
   const remaining = goal.target - goal.current;
 
   return (
@@ -177,7 +177,7 @@ function GoalCard({ goal }: { goal: FinancialGoal }) {
 function SummaryCard({ goals }: { goals: FinancialGoal[] }) {
   const totalTarget = goals.reduce((sum, g) => sum + g.target, 0);
   const totalCurrent = goals.reduce((sum, g) => sum + g.current, 0);
-  const totalPercentage = (totalCurrent / totalTarget) * 100;
+  const totalPercentage = totalTarget > 0 ? (totalCurrent / totalTarget) * 100 : 0;
   const monthlyAuto = goals.reduce(
     (sum, g) => sum + g.sources.filter((s) => s.type === "auto").reduce((s, src) => s + src.monthly, 0),
     0
@@ -222,6 +222,8 @@ function SummaryCard({ goals }: { goals: FinancialGoal[] }) {
 }
 
 function AspirationsCard({ aspirations }: { aspirations: Aspiration[] }) {
+  const allItems = aspirations.flatMap((a) => a.items);
+
   return (
     <div className="bg-gray-800/60 backdrop-blur border border-gray-700/50 rounded-2xl p-6">
       <div className="flex items-center gap-3 mb-4">
@@ -234,9 +236,9 @@ function AspirationsCard({ aspirations }: { aspirations: Aspiration[] }) {
         </div>
       </div>
 
-      {aspirations[0]?.items.length > 0 ? (
+      {allItems.length > 0 ? (
         <ul className="space-y-2">
-          {aspirations[0].items.map((item, i) => (
+          {allItems.map((item, i) => (
             <li key={i} className="flex items-center gap-2 text-gray-300">
               <span className="text-purple-400">→</span>
               {item}
@@ -255,7 +257,7 @@ function AspirationsCard({ aspirations }: { aspirations: Aspiration[] }) {
 
 export function GoalsPage({ data }: { data: GoalsData }) {
   return (
-    <div className="space-y-6" dir="rtl">
+    <div className="space-y-6">
       {/* Summary */}
       <SummaryCard goals={data.financialGoals} />
 
