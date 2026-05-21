@@ -5,36 +5,38 @@
       "ticker": "5139886",
       "name": "MTF Indxx Bitcoin Reference",
       "shares": 1674,
-      "avgCostILS": 66.79,
-      "currentPriceILS": 65.41,
+      "avgCostILS": 0.67,
+      "currentPriceILS": 0.65,
       "currency": "ILS",
-      "value": 109496,
-      "gainLoss": -2310,
-      "gainLossPercent": -2.07,
+      "value": 1088,
+      "gainLoss": -34,
+      "gainLossPercent": -2.99,
       "lastUpdated": "2026-05-21"
     },
     {
       "ticker": "VOO",
       "name": "Vanguard S&P 500 ETF",
       "shares": 7.44,
+      "avgCostUSD": 525.97,
       "avgCostILS": 1914,
-      "currentPriceILS": 1978.65,
+      "currentPriceILS": 1976.45,
       "currency": "USD",
-      "value": 14721,
-      "gainLoss": 481,
-      "gainLossPercent": 3.38,
+      "value": 14705,
+      "gainLoss": 465,
+      "gainLossPercent": 3.26,
       "lastUpdated": "2026-05-21"
     },
     {
       "ticker": "IVV",
       "name": "iShares S&P 500 Index Fund",
       "shares": 42.3,
-      "avgCostILS": 1948,
-      "currentPriceILS": 2161.81,
+      "avgCostUSD": 535.81,
+      "avgCostILS": 1950,
+      "currentPriceILS": 2159.87,
       "currency": "USD",
-      "value": 91445,
-      "gainLoss": 9045,
-      "gainLossPercent": 10.98,
+      "value": 91363,
+      "gainLoss": 8878,
+      "gainLossPercent": 10.76,
       "lastUpdated": "2026-05-21"
     }
   ],
@@ -45,8 +47,8 @@
     }
   ],
   "realEstate": [],
-  "totalStocks": 215662,
+  "totalStocks": 107156,
   "totalSavings": 50000,
   "totalRealEstateEquity": 0,
-  "totalNetWorth": 265662
+  "totalNetWorth": 157156
 }
