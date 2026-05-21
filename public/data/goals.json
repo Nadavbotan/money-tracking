@@ -3,9 +3,9 @@
     {
       "id": "stocks-2026",
       "title": "השקעות במניות",
-      "description": "להוסיף 40,000₪ לתיק ההשקעות השנה",
+      "description": "להשיג 40,000₪ לתיק השקעות השנה",
       "target": 40000,
-      "current": 0,
+      "current": 1000,
       "unit": "ILS",
       "icon": "TrendingUp",
       "color": "#10B981",
@@ -13,8 +13,7 @@
         { "name": "ESPP (2,950₪/חודש)", "monthly": 2950, "type": "auto" },
         { "name": "העברות ידניות", "monthly": 0, "type": "manual" }
       ],
-      "startBalance": 107000,
-      "note": "יעד: 147,000₪ בסוף 2026"
+      "note": "יעד שנתי: 40,000₪"
     },
     {
       "id": "trip-fund",
@@ -33,16 +32,21 @@
       "title": "חיסכון לעידו",
       "description": "400₪ כל חודש בצד",
       "target": 4800,
-      "current": 0,
+      "current": 2000,
       "unit": "ILS",
       "icon": "Baby",
       "color": "#F59E0B",
       "sources": [
-        { "name": "הפקדה לפיקדון", "monthly": 400, "type": "auto" }
+        { "name": "הפקדה חודשית", "monthly": 400, "type": "auto" }
       ],
-      "note": "מועבר כל כמה חודשים לחשבון השקעות"
+      "note": "מתחילת השנה — 400×5 חודשים (ינואר-מאי)"
     }
   ],
+  "summary": {
+    "yearlyTarget": 74800,
+    "totalSaved": 13000,
+    "autoMonthly": 3350
+  },
   "aspirations": [
     {
       "id": "aim-high",
@@ -50,5 +54,5 @@
       "items": []
     }
   ],
-  "lastUpdated": "2026-05-17"
+  "lastUpdated": "2026-05-21"
 }
