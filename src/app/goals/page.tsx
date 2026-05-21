@@ -15,26 +15,22 @@ export default function Goals() {
     goalsData = getGoalsData();
   } catch {
     return (
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 py-6 space-y-6" dir="rtl">
-        <div className="flex items-center justify-between">
-          <h1 className="text-2xl font-bold text-gray-100">Money Tracker</h1>
-          <Navigation />
-        </div>
+      <main className="max-w-lg mx-auto px-4 pt-4 pb-24 lg:max-w-7xl lg:px-6">
+        <h1 className="text-xl font-bold text-gray-100 text-center mb-4">יעדים</h1>
         <div className="bg-red-900/20 border border-red-700/50 rounded-2xl p-6 text-center">
           <p className="text-red-400">לא ניתן לטעון את נתוני היעדים</p>
           <p className="text-gray-500 text-sm mt-1">בדוק שהקובץ public/data/goals.json תקין</p>
         </div>
+        <Navigation />
       </main>
     );
   }
 
   return (
-    <main className="max-w-7xl mx-auto px-4 sm:px-6 py-6 space-y-6" dir="rtl">
-      <div className="flex items-center justify-between">
-        <h1 className="text-2xl font-bold text-gray-100">Money Tracker</h1>
-        <Navigation />
-      </div>
+    <main className="max-w-lg mx-auto px-4 pt-4 pb-24 lg:max-w-7xl lg:px-6">
+      <h1 className="text-xl font-bold text-gray-100 text-center mb-4">יעדים</h1>
       <GoalsPage data={goalsData} />
+      <Navigation />
     </main>
   );
 }

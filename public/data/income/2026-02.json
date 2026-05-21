@@ -1,5 +1,19 @@
 [
   {
+    "id": "bank-income-20260220-_-115",
+    "date": "2026-02-20",
+    "merchant": "קצבת ילדים",
+    "amount": 115,
+    "charged_amount": 115,
+    "currency": "ILS",
+    "category": "child_benefit",
+    "card": "bank",
+    "source": "local",
+    "type": "income",
+    "transaction_type": "regular",
+    "reference": "13104088"
+  },
+  {
     "id": "bank-income-20260227-_-7085",
     "date": "2026-02-27",
     "merchant": "משיכת פקדון",
@@ -14,17 +28,73 @@
     "reference": "2605685504029"
   },
   {
-    "id": "bank-income-20260220-_-115",
-    "date": "2026-02-20",
-    "merchant": "קצבת ילדים",
-    "amount": 115,
-    "charged_amount": 115,
+    "id": "bank-income-20260301-_-14566.2",
+    "date": "2026-03-01",
+    "merchant": "מנדיי.קום - משכורת נדב",
+    "amount": 14566.2,
+    "charged_amount": 14566.2,
     "currency": "ILS",
-    "category": "child_benefit",
+    "category": "salary",
     "card": "bank",
     "source": "local",
     "type": "income",
     "transaction_type": "regular",
-    "reference": "13104088"
+    "reference": "42814012"
+  },
+  {
+    "id": "bank-income-20260301-_-5592.54",
+    "date": "2026-03-01",
+    "merchant": "עובדי מדינה - משכורת ספיר",
+    "amount": 5592.54,
+    "charged_amount": 5592.54,
+    "currency": "ILS",
+    "category": "salary",
+    "card": "bank",
+    "source": "local",
+    "type": "income",
+    "transaction_type": "regular",
+    "reference": "4170049"
+  },
+  {
+    "id": "bank-income-20260302-_-1650",
+    "date": "2026-03-02",
+    "merchant": "הכנסה מעסק ספיר",
+    "amount": 1650,
+    "charged_amount": 1650,
+    "currency": "ILS",
+    "category": "salary",
+    "card": "bank",
+    "source": "local",
+    "type": "income",
+    "transaction_type": "regular",
+    "reference": "446280442"
+  },
+  {
+    "id": "bank-income-20260304-_-2540",
+    "date": "2026-03-04",
+    "merchant": "חכמוב יואב",
+    "amount": 2540,
+    "charged_amount": 2540,
+    "currency": "ILS",
+    "category": "other_income",
+    "card": "bank",
+    "source": "local",
+    "type": "income",
+    "transaction_type": "regular",
+    "reference": "446414245"
+  },
+  {
+    "id": "bank-income-20260306-_-17382.38",
+    "date": "2026-03-06",
+    "merchant": "זיכוי מבנק המזרחי",
+    "amount": 17382.38,
+    "charged_amount": 17382.38,
+    "currency": "ILS",
+    "category": "other_income",
+    "card": "bank",
+    "source": "local",
+    "type": "income",
+    "transaction_type": "regular",
+    "reference": "99020330"
   }
 ]

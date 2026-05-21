@@ -1,12 +1,12 @@
 "use client";
 
-import { useState } from "react";
 import { KpiCards, SpendVsIncomeBar } from "./KpiCards";
 import { CategoryBreakdownChart, NetBarChart, CategoryDonutChart } from "./Charts";
 import { MonthSelector } from "./MonthSelector";
 import { TopMerchants } from "./TopMerchants";
 import type { MonthlyData, MonthlySummary, Category } from "@/lib/types";
 import { formatMonthShort } from "@/lib/formatters";
+import { useMonth } from "@/lib/MonthContext";
 
 interface OverviewDashboardProps {
   months: string[];
@@ -27,7 +27,7 @@ export function OverviewDashboard({
 }: OverviewDashboardProps) {
   const getCategoryColor = (key: string) => categoryColorMap[key] || "#757575";
   const getCategoryName = (key: string) => categoryNameMap[key] || key;
-  const [selectedMonth, setSelectedMonth] = useState(months[0] || "");
+  const { selectedMonth, setSelectedMonth } = useMonth();
 
   if (months.length === 0) {
     return (

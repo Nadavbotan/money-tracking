@@ -1,6 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import { Rubik } from "next/font/google";
 import "./globals.css";
+import { MonthProvider } from "@/lib/MonthContext";
+import { getAvailableMonths } from "@/lib/data";
 
 const rubik = Rubik({
   subsets: ["latin", "hebrew"],
@@ -25,10 +27,14 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const months = getAvailableMonths();
+
   return (
     <html lang="he" dir="rtl" className={`${rubik.variable} dark`}>
       <body className="min-h-screen bg-gray-950 text-gray-100 font-sans antialiased">
-        {children}
+        <MonthProvider months={months}>
+          {children}
+        </MonthProvider>
       </body>
     </html>
   );

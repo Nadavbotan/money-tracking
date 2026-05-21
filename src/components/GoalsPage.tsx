@@ -1,6 +1,6 @@
 "use client";
 
-import { Target, TrendingUp, Plane, Baby, Rocket, CheckCircle2, Clock } from "lucide-react";
+import { Target, TrendingUp, Plane, Baby, Rocket, CheckCircle2, Clock, Building2 } from "lucide-react";
 
 interface GoalSource {
   name: string;
@@ -22,6 +22,13 @@ interface FinancialGoal {
   note?: string;
 }
 
+interface RSUData {
+  company: string;
+  units: number;
+  sharePriceUSD: number;
+  lastUpdated: string;
+}
+
 interface Aspiration {
   id: string;
   title: string;
@@ -30,6 +37,7 @@ interface Aspiration {
 
 interface GoalsData {
   financialGoals: FinancialGoal[];
+  rsu?: RSUData;
   aspirations: Aspiration[];
   lastUpdated: string;
 }
@@ -40,6 +48,7 @@ const iconMap: Record<string, React.ComponentType<{ className?: string; style?: 
   Baby,
   Target,
   Rocket,
+  Building2,
 };
 
 function formatCurrency(amount: number): string {
@@ -221,6 +230,54 @@ function SummaryCard({ goals }: { goals: FinancialGoal[] }) {
   );
 }
 
+function formatUSD(amount: number): string {
+  return new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0,
+  }).format(amount);
+}
+
+function RSUCard({ rsu }: { rsu: RSUData }) {
+  const totalValue = rsu.units * rsu.sharePriceUSD;
+
+  return (
+    <div className="bg-gray-800/60 backdrop-blur border border-gray-700/50 rounded-2xl p-6 hover:border-gray-600/50 transition-all">
+      <div className="flex items-start justify-between mb-4">
+        <div className="flex items-center gap-3">
+          <div className="w-10 h-10 rounded-xl bg-violet-500/10 flex items-center justify-center">
+            <Building2 className="w-5 h-5 text-violet-400" />
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-100">RSU - {rsu.company}</h3>
+            <p className="text-sm text-gray-400">מניות חסומות</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="grid grid-cols-3 gap-3 mb-3">
+        <div className="text-center bg-gray-900/50 rounded-xl py-2.5 px-2">
+          <p className="text-lg font-bold text-violet-400">{rsu.units}</p>
+          <p className="text-[10px] text-gray-500">יחידות</p>
+        </div>
+        <div className="text-center bg-gray-900/50 rounded-xl py-2.5 px-2">
+          <p className="text-lg font-bold text-gray-200">${rsu.sharePriceUSD}</p>
+          <p className="text-[10px] text-gray-500">מחיר מניה</p>
+        </div>
+        <div className="text-center bg-gray-900/50 rounded-xl py-2.5 px-2">
+          <p className="text-lg font-bold text-emerald-400">{formatUSD(totalValue)}</p>
+          <p className="text-[10px] text-gray-500">שווי כולל</p>
+        </div>
+      </div>
+
+      <div className="mt-3 pt-3 border-t border-gray-700/30">
+        <p className="text-xs text-gray-500">עודכן: {rsu.lastUpdated}</p>
+      </div>
+    </div>
+  );
+}
+
 function AspirationsCard({ aspirations }: { aspirations: Aspiration[] }) {
   const allItems = aspirations.flatMap((a) => a.items);
 
@@ -260,6 +317,9 @@ export function GoalsPage({ data }: { data: GoalsData }) {
     <div className="space-y-6">
       {/* Summary */}
       <SummaryCard goals={data.financialGoals} />
+
+      {/* RSU */}
+      {data.rsu && <RSUCard rsu={data.rsu} />}
 
       {/* Goal cards grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">

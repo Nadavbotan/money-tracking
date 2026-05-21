@@ -1,11 +1,11 @@
 "use client";
 
-import { useState } from "react";
 import { NetBarChart, MonthComparisonChart } from "./Charts";
 import { MonthSelector } from "./MonthSelector";
 import { formatCurrency, formatMonth, formatMonthShort, formatPercent } from "@/lib/formatters";
 import { TrendingUp, TrendingDown, Minus, Lock, Shuffle, Scissors, PiggyBank } from "lucide-react";
 import type { MonthlyData, MonthlySummary, Category } from "@/lib/types";
+import { useMonth } from "@/lib/MonthContext";
 
 interface InsightsPageProps {
   months: string[];
@@ -16,7 +16,7 @@ interface InsightsPageProps {
   categoryNameMap: Record<string, string>;
 }
 
-const FIXED_CATEGORIES = new Set(["rent", "utilities", "insurance", "subscriptions", "fees", "kids"]);
+const FIXED_CATEGORIES = new Set(["rent", "utilities", "insurance", "subscriptions", "fees", "kids_daycare"]);
 
 export function InsightsPage({
   months,
@@ -28,7 +28,7 @@ export function InsightsPage({
 }: InsightsPageProps) {
   const getCategoryColor = (key: string) => categoryColorMap[key] || "#757575";
   const getCategoryName = (key: string) => categoryNameMap[key] || key;
-  const [selectedMonth, setSelectedMonth] = useState(months[0] || "");
+  const { selectedMonth, setSelectedMonth } = useMonth();
 
   if (months.length === 0) {
     return (

@@ -42,6 +42,12 @@
       "note": "מתחילת השנה — 400×5 חודשים (ינואר-מאי)"
     }
   ],
+  "rsu": {
+    "company": "monday.com",
+    "units": 237,
+    "sharePriceUSD": 76.04,
+    "lastUpdated": "2026-05-21"
+  },
   "summary": {
     "yearlyTarget": 74800,
     "totalSaved": 13000,

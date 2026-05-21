@@ -5,6 +5,7 @@ import { Download, RotateCcw } from "lucide-react";
 import { MonthSelector } from "./MonthSelector";
 import { TransactionList } from "./TransactionList";
 import type { MonthlyData, Category } from "@/lib/types";
+import { useMonth } from "@/lib/MonthContext";
 
 interface TransactionsPageProps {
   months: string[];
@@ -23,7 +24,7 @@ export function TransactionsPage({
 }: TransactionsPageProps) {
   const getCategoryColor = (key: string) => categoryColorMap[key] || "#757575";
   const getCategoryName = (key: string) => categoryNameMap[key] || key;
-  const [selectedMonth, setSelectedMonth] = useState(months[0] || "");
+  const { selectedMonth, setSelectedMonth } = useMonth();
   const [overrides, setOverrides] = useState<Record<string, string>>({});
   const pendingCount = Object.keys(overrides).length;
 
