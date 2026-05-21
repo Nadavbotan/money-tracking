@@ -135,6 +135,7 @@ export function getNetWorthData(): NetWorthData {
     totalStocks: 0,
     totalSavings: 0,
     totalRealEstateEquity: 0,
+    totalRSU: 0,
     totalNetWorth: 0,
   });
 }

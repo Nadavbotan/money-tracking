@@ -74,13 +74,24 @@ export interface RealEstateAsset {
   equity: number;
 }
 
+export interface RSUHolding {
+  company: string;
+  units: number;
+  sharePriceUSD: number;
+  valueUSD: number;
+  valueILS: number;
+  lastUpdated: string;
+}
+
 export interface NetWorthData {
   lastUpdated: string;
   stocks: StockHolding[];
   savings: SavingsAccount[];
   realEstate: RealEstateAsset[];
+  rsu?: RSUHolding;
   totalStocks: number;
   totalSavings: number;
   totalRealEstateEquity: number;
+  totalRSU: number;
   totalNetWorth: number;
 }

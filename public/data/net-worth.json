@@ -47,8 +47,17 @@
     }
   ],
   "realEstate": [],
+  "rsu": {
+    "company": "monday.com",
+    "units": 237,
+    "sharePriceUSD": 76.04,
+    "valueUSD": 18021,
+    "valueILS": 65596,
+    "lastUpdated": "2026-05-21"
+  },
   "totalStocks": 107156,
   "totalSavings": 50000,
   "totalRealEstateEquity": 0,
-  "totalNetWorth": 157156
+  "totalRSU": 65596,
+  "totalNetWorth": 222752
 }
