@@ -1,15 +1,15 @@
 import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
+import { Rubik } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
+const rubik = Rubik({
+  subsets: ["latin", "hebrew"],
+  variable: "--font-rubik",
 });
 
 export const metadata: Metadata = {
-  title: "Money Tracker",
-  description: "Personal finance dashboard",
+  title: "מעקב הוצאות",
+  description: "ניהול תקציב משפחתי",
   manifest: "/manifest.json",
 };
 
@@ -17,7 +17,7 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   maximumScale: 1,
-  themeColor: "#111827",
+  themeColor: "#030712",
 };
 
 export default function RootLayout({
@@ -26,7 +26,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} dark`}>
+    <html lang="he" dir="rtl" className={`${rubik.variable} dark`}>
       <body className="min-h-screen bg-gray-950 text-gray-100 font-sans antialiased">
         {children}
       </body>

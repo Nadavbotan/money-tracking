@@ -7,6 +7,7 @@ import type {
   Card,
   MonthlyData,
   MonthlySummary,
+  NetWorthData,
 } from "./types";
 
 const DATA_DIR = path.join(process.cwd(), "public", "data");
@@ -125,9 +126,22 @@ export function getCategoryColor(categoryKey: string): string {
   return match?.color ?? "#757575";
 }
 
+export function getNetWorthData(): NetWorthData {
+  return readJSON<NetWorthData>(path.join(DATA_DIR, "net-worth.json"), {
+    lastUpdated: "",
+    stocks: [],
+    savings: [],
+    realEstate: [],
+    totalStocks: 0,
+    totalSavings: 0,
+    totalRealEstateEquity: 0,
+    totalNetWorth: 0,
+  });
+}
+
 export function getCategoryName(categoryKey: string): string {
   const config = getCategories();
   const all: Category[] = [...config.expenses, ...config.income];
   const match = all.find((c) => c.key === categoryKey);
-  return match?.name ?? categoryKey;
+  return match?.nameHe ?? match?.name ?? categoryKey;
 }

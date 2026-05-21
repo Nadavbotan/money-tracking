@@ -11,27 +11,27 @@ interface MonthSelectorProps {
 
 export function MonthSelector({ months, selected, onChange }: MonthSelectorProps) {
   const currentIdx = months.indexOf(selected);
-  const hasPrev = currentIdx < months.length - 1;
-  const hasNext = currentIdx > 0;
+  const hasNewer = currentIdx > 0;
+  const hasOlder = currentIdx < months.length - 1;
 
   return (
-    <div className="flex items-center gap-3">
+    <div className="flex items-center justify-center gap-3">
       <button
-        onClick={() => hasPrev && onChange(months[currentIdx + 1])}
-        disabled={!hasPrev}
-        className="p-2 rounded-lg hover:bg-gray-700/50 disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
+        onClick={() => hasOlder && onChange(months[currentIdx + 1])}
+        disabled={!hasOlder}
+        className="p-2 rounded-xl hover:bg-gray-800 disabled:opacity-20 disabled:cursor-not-allowed transition-colors"
       >
-        <ChevronLeft className="w-5 h-5 text-gray-300" />
+        <ChevronRight className="w-5 h-5 text-gray-300" />
       </button>
-      <span className="text-lg font-semibold text-gray-100 min-w-[160px] text-center">
+      <span className="text-lg font-bold text-gray-100 min-w-[140px] text-center">
         {formatMonth(selected)}
       </span>
       <button
-        onClick={() => hasNext && onChange(months[currentIdx - 1])}
-        disabled={!hasNext}
-        className="p-2 rounded-lg hover:bg-gray-700/50 disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
+        onClick={() => hasNewer && onChange(months[currentIdx - 1])}
+        disabled={!hasNewer}
+        className="p-2 rounded-xl hover:bg-gray-800 disabled:opacity-20 disabled:cursor-not-allowed transition-colors"
       >
-        <ChevronRight className="w-5 h-5 text-gray-300" />
+        <ChevronLeft className="w-5 h-5 text-gray-300" />
       </button>
     </div>
   );

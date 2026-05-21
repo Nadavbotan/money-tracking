@@ -1,11 +1,13 @@
 {
-  "name": "Money Tracker",
-  "short_name": "Money",
-  "description": "Personal finance dashboard",
+  "name": "מעקב הוצאות",
+  "short_name": "הוצאות",
+  "description": "ניהול תקציב משפחתי",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#030712",
-  "theme_color": "#111827",
+  "theme_color": "#030712",
+  "dir": "rtl",
+  "lang": "he",
   "icons": [
     {
       "src": "/icon-192.png",

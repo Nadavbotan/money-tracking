@@ -1,10 +1,11 @@
-import { getAvailableMonths, getMonthlyData, getCategories } from "@/lib/data";
-import { TransactionsPage } from "@/components/TransactionsPage";
+import { getAvailableMonths, getMonthlyData, getAllMonthlySummaries, getCategories } from "@/lib/data";
+import { InsightsPage } from "@/components/InsightsPage";
 import { Navigation } from "@/components/Navigation";
 import type { MonthlyData } from "@/lib/types";
 
-export default function Transactions() {
+export default function Insights() {
   const months = getAvailableMonths();
+  const summaries = getAllMonthlySummaries();
   const categories = getCategories();
 
   const monthlyDataMap: Record<string, MonthlyData> = {};
@@ -21,10 +22,11 @@ export default function Transactions() {
 
   return (
     <main className="max-w-lg mx-auto px-4 pt-4 pb-24 lg:max-w-7xl lg:px-6">
-      <h1 className="text-xl font-bold text-gray-100 text-center mb-4">תנועות</h1>
-      <TransactionsPage
+      <h1 className="text-xl font-bold text-gray-100 text-center mb-4">תובנות</h1>
+      <InsightsPage
         months={months}
         monthlyDataMap={monthlyDataMap}
+        summaries={summaries}
         categories={[...categories.expenses, ...categories.income]}
         categoryColorMap={categoryColorMap}
         categoryNameMap={categoryNameMap}

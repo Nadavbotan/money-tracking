@@ -17,15 +17,12 @@ export default function Home() {
   const categoryNameMap: Record<string, string> = {};
   for (const cat of [...categories.expenses, ...categories.income]) {
     categoryColorMap[cat.key] = cat.color;
-    categoryNameMap[cat.key] = cat.name;
+    categoryNameMap[cat.key] = cat.nameHe;
   }
 
   return (
-    <main className="max-w-7xl mx-auto px-4 sm:px-6 py-6 space-y-6">
-      <div className="flex items-center justify-between">
-        <h1 className="text-2xl font-bold text-gray-100">Money Tracker</h1>
-        <Navigation />
-      </div>
+    <main className="max-w-lg mx-auto px-4 pt-4 pb-24 lg:max-w-7xl lg:px-6">
+      <h1 className="text-xl font-bold text-gray-100 text-center mb-4">סקירה</h1>
       <OverviewDashboard
         months={months}
         monthlyDataMap={monthlyDataMap}
@@ -34,6 +31,7 @@ export default function Home() {
         categoryColorMap={categoryColorMap}
         categoryNameMap={categoryNameMap}
       />
+      <Navigation />
     </main>
   );
 }

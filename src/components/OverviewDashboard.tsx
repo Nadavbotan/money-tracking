@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { KpiCards, SpendVsIncomeBar } from "./KpiCards";
-import { CategoryBreakdownChart, SpendVsIncomeChart, CategoryDonutChart } from "./Charts";
+import { CategoryBreakdownChart, NetBarChart, CategoryDonutChart } from "./Charts";
 import { MonthSelector } from "./MonthSelector";
 import { TopMerchants } from "./TopMerchants";
 import type { MonthlyData, MonthlySummary, Category } from "@/lib/types";
@@ -35,10 +35,9 @@ export function OverviewDashboard({
         <div className="w-16 h-16 rounded-full bg-gray-800 flex items-center justify-center mb-4">
           <span className="text-2xl">📊</span>
         </div>
-        <h2 className="text-xl font-semibold text-gray-200 mb-2">No data yet</h2>
+        <h2 className="text-xl font-semibold text-gray-200 mb-2">אין נתונים עדיין</h2>
         <p className="text-gray-500 max-w-md">
-          Run the ingestion script to import your first month of transactions.
-          Check the README for instructions.
+          הרץ את סקריפט הקליטה כדי לייבא את החודש הראשון.
         </p>
       </div>
     );
@@ -63,10 +62,8 @@ export function OverviewDashboard({
   }));
 
   return (
-    <div className="space-y-6">
-      <div className="flex items-center justify-between">
-        <MonthSelector months={months} selected={selectedMonth} onChange={setSelectedMonth} />
-      </div>
+    <div className="space-y-4">
+      <MonthSelector months={months} selected={selectedMonth} onChange={setSelectedMonth} />
 
       <KpiCards
         totalIncome={data.totalIncome}
@@ -78,26 +75,26 @@ export function OverviewDashboard({
       <SpendVsIncomeBar totalIncome={data.totalIncome} totalExpenses={data.totalExpenses} />
 
       {trendData.length > 1 && (
-        <div className="bg-gray-800/50 border border-gray-700/50 rounded-xl p-5">
-          <h3 className="text-sm font-medium text-gray-300 mb-4">Income vs Expenses Over Time</h3>
-          <SpendVsIncomeChart data={trendData} />
+        <div className="bg-gray-900 border border-gray-800 rounded-2xl p-4">
+          <h3 className="text-sm font-semibold text-gray-300 mb-3">נטו חודשי</h3>
+          <NetBarChart data={trendData} />
         </div>
       )}
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        <div className="lg:col-span-2 bg-gray-800/50 border border-gray-700/50 rounded-xl p-5">
-          <h3 className="text-sm font-medium text-gray-300 mb-4">Spending by Category</h3>
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+        <div className="lg:col-span-2 bg-gray-900 border border-gray-800 rounded-2xl p-4">
+          <h3 className="text-sm font-semibold text-gray-300 mb-3">הוצאות לפי קטגוריה</h3>
           <CategoryBreakdownChart data={categoryData} />
         </div>
 
-        <div className="space-y-6">
-          <div className="bg-gray-800/50 border border-gray-700/50 rounded-xl p-5">
-            <h3 className="text-sm font-medium text-gray-300 mb-2">Distribution</h3>
+        <div className="space-y-4">
+          <div className="bg-gray-900 border border-gray-800 rounded-2xl p-4">
+            <h3 className="text-sm font-semibold text-gray-300 mb-2">התפלגות</h3>
             <CategoryDonutChart data={categoryData} total={data.totalExpenses} />
           </div>
 
-          <div className="bg-gray-800/50 border border-gray-700/50 rounded-xl p-5">
-            <h3 className="text-sm font-medium text-gray-300 mb-4">Top Merchants</h3>
+          <div className="bg-gray-900 border border-gray-800 rounded-2xl p-4">
+            <h3 className="text-sm font-semibold text-gray-300 mb-3">בתי עסק מובילים</h3>
             <TopMerchants transactions={data.transactions} />
           </div>
         </div>

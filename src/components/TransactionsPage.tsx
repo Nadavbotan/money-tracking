@@ -1,10 +1,10 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState } from "react";
 import { Download, RotateCcw } from "lucide-react";
 import { MonthSelector } from "./MonthSelector";
 import { TransactionList } from "./TransactionList";
-import type { MonthlyData, Category, Transaction } from "@/lib/types";
+import type { MonthlyData, Category } from "@/lib/types";
 
 interface TransactionsPageProps {
   months: string[];
@@ -29,7 +29,7 @@ export function TransactionsPage({
 
   if (months.length === 0) {
     return (
-      <div className="text-center py-24 text-gray-500">No transaction data available.</div>
+      <div className="text-center py-24 text-gray-500">אין נתוני תנועות.</div>
     );
   }
 
@@ -72,14 +72,13 @@ export function TransactionsPage({
   };
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-4">
       <MonthSelector months={months} selected={selectedMonth} onChange={setSelectedMonth} />
 
       {pendingCount > 0 && (
-        <div className="flex items-center justify-between bg-amber-500/10 border border-amber-500/20 rounded-xl px-5 py-3">
+        <div className="flex items-center justify-between bg-amber-500/10 border border-amber-500/20 rounded-2xl px-4 py-3">
           <span className="text-sm text-amber-300">
-            {pendingCount} category change{pendingCount !== 1 ? "s" : ""} pending.
-            Download and apply with the recategorize script.
+            {pendingCount} שינויי קטגוריה ממתינים.
           </span>
           <div className="flex items-center gap-2">
             <button
@@ -87,14 +86,14 @@ export function TransactionsPage({
               className="flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs text-gray-400 hover:text-gray-200 hover:bg-gray-700/50 transition-colors"
             >
               <RotateCcw className="w-3.5 h-3.5" />
-              Reset
+              איפוס
             </button>
             <button
               onClick={downloadChanges}
               className="flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs bg-amber-500/20 text-amber-300 hover:bg-amber-500/30 transition-colors"
             >
               <Download className="w-3.5 h-3.5" />
-              Download changes
+              הורדת שינויים
             </button>
           </div>
         </div>

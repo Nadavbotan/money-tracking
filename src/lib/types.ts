@@ -48,3 +48,38 @@ export interface MonthlySummary {
   totalIncome: number;
   net: number;
 }
+
+export interface StockHolding {
+  ticker: string;
+  name: string;
+  shares: number;
+  avgCostILS: number;
+  currentPriceILS: number;
+  value: number;
+  gainLoss: number;
+  gainLossPercent: number;
+  lastUpdated: string;
+}
+
+export interface SavingsAccount {
+  name: string;
+  amount: number;
+}
+
+export interface RealEstateAsset {
+  name: string;
+  estimatedValue: number;
+  mortgage: number;
+  equity: number;
+}
+
+export interface NetWorthData {
+  lastUpdated: string;
+  stocks: StockHolding[];
+  savings: SavingsAccount[];
+  realEstate: RealEstateAsset[];
+  totalStocks: number;
+  totalSavings: number;
+  totalRealEstateEquity: number;
+  totalNetWorth: number;
+}

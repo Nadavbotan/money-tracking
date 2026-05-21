@@ -1,8 +1,8 @@
 "use client";
 
 import { useState, useMemo, useRef, useEffect } from "react";
-import { Search, Filter, ArrowUpDown, Pencil, X, Check } from "lucide-react";
-import { formatCurrency, formatDate } from "@/lib/formatters";
+import { Search, Filter, ArrowUpDown, Pencil, Check } from "lucide-react";
+import { formatCurrency, formatDateShort } from "@/lib/formatters";
 import type { Transaction, Category } from "@/lib/types";
 
 interface TransactionListProps {
@@ -70,13 +70,13 @@ function CategoryPicker({
   return (
     <div
       ref={ref}
-      className="absolute z-50 mt-1 bg-gray-800 border border-gray-600 rounded-lg shadow-xl py-1 max-h-64 overflow-y-auto min-w-[180px]"
+      className="absolute z-50 mt-1 bg-gray-800 border border-gray-600 rounded-xl shadow-xl py-1 max-h-64 overflow-y-auto min-w-[180px]"
     >
       {categories.map((cat) => (
         <button
           key={cat.key}
           onClick={() => onSelect(cat.key)}
-          className={`w-full text-left px-3 py-2 text-sm flex items-center gap-2 hover:bg-gray-700/50 transition-colors ${
+          className={`w-full text-start px-3 py-2 text-sm flex items-center gap-2 hover:bg-gray-700/50 transition-colors ${
             cat.key === current ? "bg-gray-700/30" : ""
           }`}
         >
@@ -84,8 +84,8 @@ function CategoryPicker({
             className="w-2.5 h-2.5 rounded-full shrink-0"
             style={{ backgroundColor: getCategoryColor(cat.key) }}
           />
-          <span className="text-gray-200">{cat.name}</span>
-          {cat.key === current && <Check className="w-3.5 h-3.5 text-blue-400 ml-auto" />}
+          <span className="text-gray-200">{cat.nameHe}</span>
+          {cat.key === current && <Check className="w-3.5 h-3.5 text-blue-400 ms-auto" />}
         </button>
       ))}
     </div>
@@ -156,82 +156,82 @@ export function TransactionList({
   };
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-3">
       <div className="flex items-center gap-3">
         <div className="relative flex-1">
-          <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500" />
+          <Search className="absolute start-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500" />
           <input
             type="text"
-            placeholder="Search merchants..."
+            placeholder="חיפוש בית עסק..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="w-full bg-gray-800/50 border border-gray-700/50 rounded-lg pl-10 pr-4 py-2.5 text-sm text-gray-200 placeholder-gray-500 focus:outline-none focus:border-blue-500/50 transition-colors"
+            className="w-full bg-gray-900 border border-gray-800 rounded-xl ps-10 pe-4 py-2.5 text-sm text-gray-200 placeholder-gray-600 focus:outline-none focus:border-gray-600 transition-colors"
           />
         </div>
         <button
           onClick={() => setShowFilters(!showFilters)}
-          className={`flex items-center gap-2 px-4 py-2.5 rounded-lg border text-sm transition-colors ${
+          className={`flex items-center gap-2 px-4 py-2.5 rounded-xl border text-sm transition-colors ${
             showFilters
               ? "bg-blue-500/10 border-blue-500/30 text-blue-400"
-              : "bg-gray-800/50 border-gray-700/50 text-gray-400 hover:text-gray-300"
+              : "bg-gray-900 border-gray-800 text-gray-400 hover:text-gray-300"
           }`}
         >
           <Filter className="w-4 h-4" />
-          <span className="hidden sm:inline">Filters</span>
+          <span className="hidden sm:inline">סינון</span>
         </button>
       </div>
 
       {showFilters && (
-        <div className="flex flex-wrap gap-3 p-4 bg-gray-800/30 rounded-lg border border-gray-700/30">
+        <div className="flex flex-wrap gap-3 p-3 bg-gray-900/50 rounded-xl border border-gray-800">
           <select
             value={categoryFilter}
             onChange={(e) => setCategoryFilter(e.target.value)}
-            className="bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-gray-200 focus:outline-none focus:border-blue-500/50"
+            className="bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-gray-200 focus:outline-none focus:border-gray-500"
           >
-            <option value="all">All categories</option>
+            <option value="all">כל הקטגוריות</option>
             {usedCategories.map((c) => (
               <option key={c.key} value={c.key}>
-                {c.name}
+                {c.nameHe}
               </option>
             ))}
           </select>
           <select
             value={typeFilter}
             onChange={(e) => setTypeFilter(e.target.value)}
-            className="bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-gray-200 focus:outline-none focus:border-blue-500/50"
+            className="bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-gray-200 focus:outline-none focus:border-gray-500"
           >
-            <option value="all">All types</option>
-            <option value="expense">Expenses</option>
-            <option value="income">Income</option>
+            <option value="all">הכל</option>
+            <option value="expense">הוצאות</option>
+            <option value="income">הכנסות</option>
           </select>
         </div>
       )}
 
       <div className="text-xs text-gray-500">
-        {filtered.length} transaction{filtered.length !== 1 ? "s" : ""}
+        {filtered.length} תנועות
       </div>
 
       {/* Desktop table */}
       <div className="hidden md:block overflow-x-auto">
         <table className="w-full">
           <thead>
-            <tr className="text-left text-xs text-gray-500 border-b border-gray-800">
+            <tr className="text-start text-xs text-gray-500 border-b border-gray-800">
               <th
-                className="pb-3 pr-4 cursor-pointer hover:text-gray-300 transition-colors"
+                className="pb-3 pe-4 cursor-pointer hover:text-gray-300 transition-colors text-start"
                 onClick={() => toggleSort("date")}
               >
                 <span className="flex items-center gap-1">
-                  Date <ArrowUpDown className="w-3 h-3" />
+                  תאריך <ArrowUpDown className="w-3 h-3" />
                 </span>
               </th>
-              <th className="pb-3 pr-4">Merchant</th>
-              <th className="pb-3 pr-4">Category</th>
+              <th className="pb-3 pe-4 text-start">בית עסק</th>
+              <th className="pb-3 pe-4 text-start">קטגוריה</th>
               <th
-                className="pb-3 text-right cursor-pointer hover:text-gray-300 transition-colors"
+                className="pb-3 text-start cursor-pointer hover:text-gray-300 transition-colors"
                 onClick={() => toggleSort("amount")}
               >
-                <span className="flex items-center justify-end gap-1">
-                  Amount <ArrowUpDown className="w-3 h-3" />
+                <span className="flex items-center gap-1">
+                  סכום <ArrowUpDown className="w-3 h-3" />
                 </span>
               </th>
             </tr>
@@ -242,9 +242,9 @@ export function TransactionList({
                 key={tx.id}
                 className="border-b border-gray-800/50 hover:bg-gray-800/30 transition-colors"
               >
-                <td className="py-3 pr-4 text-sm text-gray-400">{formatDate(tx.date)}</td>
-                <td className="py-3 pr-4 text-sm text-gray-200">{tx.merchant}</td>
-                <td className="py-3 pr-4 relative">
+                <td className="py-3 pe-4 text-sm text-gray-400">{formatDateShort(tx.date)}</td>
+                <td className="py-3 pe-4 text-sm text-gray-200">{tx.merchant}</td>
+                <td className="py-3 pe-4 relative">
                   <CategoryBadge
                     categoryKey={tx.category}
                     getCategoryColor={getCategoryColor}
@@ -262,7 +262,7 @@ export function TransactionList({
                   )}
                 </td>
                 <td
-                  className={`py-3 text-sm text-right font-medium ${
+                  className={`py-3 text-sm font-medium ${
                     tx.type === "income" ? "text-emerald-400" : "text-gray-200"
                   }`}
                 >
@@ -280,13 +280,13 @@ export function TransactionList({
         {filtered.map((tx) => (
           <div
             key={tx.id}
-            className="bg-gray-800/30 border border-gray-700/30 rounded-lg p-4"
+            className="bg-gray-900 border border-gray-800 rounded-xl p-3.5"
           >
             <div className="flex items-center justify-between">
               <div className="min-w-0 flex-1">
                 <div className="text-sm font-medium text-gray-200 truncate">{tx.merchant}</div>
-                <div className="flex items-center gap-2 mt-1">
-                  <span className="text-xs text-gray-500">{formatDate(tx.date)}</span>
+                <div className="flex items-center gap-2 mt-1.5">
+                  <span className="text-xs text-gray-500">{formatDateShort(tx.date)}</span>
                   <div className="relative">
                     <CategoryBadge
                       categoryKey={tx.category}
@@ -307,7 +307,7 @@ export function TransactionList({
                 </div>
               </div>
               <div
-                className={`text-sm font-semibold ml-3 ${
+                className={`text-sm font-bold ms-3 ${
                   tx.type === "income" ? "text-emerald-400" : "text-gray-200"
                 }`}
               >
@@ -320,7 +320,7 @@ export function TransactionList({
       </div>
 
       {filtered.length === 0 && (
-        <div className="text-center py-12 text-gray-500">No transactions found</div>
+        <div className="text-center py-12 text-gray-500">לא נמצאו תנועות</div>
       )}
     </div>
   );
