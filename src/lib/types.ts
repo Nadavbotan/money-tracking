@@ -55,6 +55,7 @@ export interface StockHolding {
   shares: number;
   avgCostILS: number;
   currentPriceILS: number;
+  currency: "ILS" | "USD";
   value: number;
   gainLoss: number;
   gainLossPercent: number;
