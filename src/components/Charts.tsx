@@ -16,6 +16,18 @@ import {
 } from "recharts";
 import { formatCurrency, formatCurrencyWithSign } from "@/lib/formatters";
 
+const tooltipStyle = {
+  contentStyle: {
+    backgroundColor: "#1f2937",
+    border: "1px solid #4b5563",
+    borderRadius: "12px",
+    padding: "10px 14px",
+    boxShadow: "0 8px 24px rgba(0,0,0,0.5)",
+  },
+  itemStyle: { color: "#f3f4f6", fontSize: 14, fontWeight: 600 },
+  labelStyle: { color: "#9ca3af", fontSize: 12, marginBottom: 4 },
+};
+
 interface CategoryBarData {
   name: string;
   amount: number;
@@ -50,12 +62,7 @@ export function CategoryBreakdownChart({
           />
           <Tooltip
             formatter={(value) => [formatCurrency(Number(value)), "הוצאה"]}
-            contentStyle={{
-              backgroundColor: "#111827",
-              border: "1px solid #374151",
-              borderRadius: "12px",
-              color: "#f9fafb",
-            }}
+            {...tooltipStyle}
           />
           <Bar dataKey="amount" radius={[0, 6, 6, 0]} barSize={26}>
             {data.map((entry, i) => (
@@ -106,13 +113,7 @@ export function NetBarChart({
           />
           <Tooltip
             formatter={(value) => [formatCurrencyWithSign(Number(value)), "נטו"]}
-            contentStyle={{
-              backgroundColor: "#111827",
-              border: "1px solid #374151",
-              borderRadius: "12px",
-              color: "#f9fafb",
-            }}
-            labelStyle={{ color: "#9ca3af" }}
+            {...tooltipStyle}
           />
           <Bar dataKey="net" radius={[6, 6, 0, 0]} barSize={36}>
             {barData.map((entry, i) => (
@@ -170,12 +171,7 @@ export function CategoryDonutChart({
                 `${formatCurrency(Number(value))} (${((Number(value) / total) * 100).toFixed(0)}%)`,
                 name,
               ]}
-              contentStyle={{
-                backgroundColor: "#111827",
-                border: "1px solid #374151",
-                borderRadius: "12px",
-                color: "#f9fafb",
-              }}
+              {...tooltipStyle}
             />
           </PieChart>
         </ResponsiveContainer>
@@ -237,12 +233,7 @@ export function MonthComparisonChart({
           />
           <Tooltip
             formatter={(value) => [formatCurrency(Number(value))]}
-            contentStyle={{
-              backgroundColor: "#111827",
-              border: "1px solid #374151",
-              borderRadius: "12px",
-              color: "#f9fafb",
-            }}
+            {...tooltipStyle}
           />
           <Legend wrapperStyle={{ color: "#d1d5db", fontSize: 13 }} />
           <Bar name={currentLabel} dataKey="current" fill="#3b82f6" radius={[0, 4, 4, 0]} barSize={14} />

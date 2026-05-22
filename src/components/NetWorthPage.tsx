@@ -5,6 +5,18 @@ import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from "recharts";
 import { TrendingUp, TrendingDown, Landmark, PiggyBank, Home, BarChart3, Building2 } from "lucide-react";
 import type { NetWorthData } from "@/lib/types";
 
+const tooltipStyle = {
+  contentStyle: {
+    backgroundColor: "#1f2937",
+    border: "1px solid #4b5563",
+    borderRadius: "12px",
+    padding: "10px 14px",
+    boxShadow: "0 8px 24px rgba(0,0,0,0.5)",
+  },
+  itemStyle: { color: "#f3f4f6", fontSize: 14, fontWeight: 600 },
+  labelStyle: { color: "#9ca3af", fontSize: 12, marginBottom: 4 },
+};
+
 interface NetWorthPageProps {
   data: NetWorthData;
 }
@@ -64,12 +76,7 @@ export function NetWorthPage({ data }: NetWorthPageProps) {
                 </Pie>
                 <Tooltip
                   formatter={(value) => [formatCurrency(Number(value))]}
-                  contentStyle={{
-                    backgroundColor: "#111827",
-                    border: "1px solid #374151",
-                    borderRadius: "12px",
-                    color: "#f9fafb",
-                  }}
+                  {...tooltipStyle}
                 />
               </PieChart>
             </ResponsiveContainer>
