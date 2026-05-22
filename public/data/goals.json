@@ -5,7 +5,7 @@
       "title": "השקעות במניות",
       "description": "להשיג 40,000₪ לתיק השקעות השנה",
       "target": 40000,
-      "current": 1000,
+      "current": 6750,
       "unit": "ILS",
       "icon": "TrendingUp",
       "color": "#10B981",
@@ -13,7 +13,7 @@
         { "name": "ESPP (2,950₪/חודש)", "monthly": 2950, "type": "auto" },
         { "name": "העברות ידניות", "monthly": 0, "type": "manual" }
       ],
-      "note": "יעד שנתי: 40,000₪"
+      "note": "יעד שנתי: 40,000₪. מרץ: 2,800 | אפריל: 2,950 | + 1,000 בסיס"
     },
     {
       "id": "trip-fund",
@@ -44,7 +44,7 @@
   ],
   "summary": {
     "yearlyTarget": 74800,
-    "totalSaved": 13000,
+    "totalSaved": 18750,
     "autoMonthly": 3350
   },
   "aspirations": [
@@ -54,5 +54,5 @@
       "items": []
     }
   ],
-  "lastUpdated": "2026-05-21"
+  "lastUpdated": "2026-05-22"
 }
