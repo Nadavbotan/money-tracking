@@ -1,0 +1,151 @@
+name: Update Stock Prices
+
+on:
+  schedule:
+    - cron: '0 18 * * 1-5'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  update-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Fetch prices and update net-worth.json
+        id: update
+        run: |
+          node << 'SCRIPT'
+          const fs = require("fs");
+          const path = require("path");
+
+          const NET_WORTH_PATH = path.join("public", "data", "net-worth.json");
+
+          async function fetchPrice(ticker) {
+            try {
+              const url = `https://query1.finance.yahoo.com/v8/finance/chart/${ticker}?interval=1d&range=1d`;
+              const resp = await fetch(url, {
+                headers: { "User-Agent": "Mozilla/5.0" },
+              });
+              if (!resp.ok) return null;
+              const json = await resp.json();
+              const price = json?.chart?.result?.[0]?.meta?.regularMarketPrice;
+              return typeof price === "number" ? price : null;
+            } catch {
+              return null;
+            }
+          }
+
+          async function main() {
+            const data = JSON.parse(fs.readFileSync(NET_WORTH_PATH, "utf-8"));
+
+            const usdIls = (await fetchPrice("USDILS=X")) ?? 3.64;
+            console.log(`USD/ILS: ${usdIls.toFixed(2)}`);
+
+            let updated = false;
+
+            for (const stock of data.stocks) {
+              if (stock.currency === "ILS") {
+                console.log(`${stock.ticker}: ILS fund, skipping price fetch`);
+                continue;
+              }
+
+              const priceUSD = await fetchPrice(stock.ticker);
+              if (priceUSD === null) {
+                console.log(`${stock.ticker}: could not fetch, keeping current`);
+                continue;
+              }
+
+              stock.currentPriceILS = Math.round(priceUSD * usdIls * 100) / 100;
+              stock.value = Math.round(stock.shares * stock.currentPriceILS);
+              const totalCost = stock.shares * stock.avgCostILS;
+              stock.gainLoss = Math.round(stock.value - totalCost);
+              stock.gainLossPercent = totalCost > 0
+                ? Math.round(((stock.value - totalCost) / totalCost) * 10000) / 100
+                : 0;
+              stock.lastUpdated = new Date().toISOString().slice(0, 10);
+              updated = true;
+              console.log(`${stock.ticker}: $${priceUSD.toFixed(2)} -> ILS ${stock.currentPriceILS}`);
+            }
+
+            if (data.rsu) {
+              const mndyPrice = await fetchPrice("MNDY");
+              if (mndyPrice !== null) {
+                data.rsu.sharePriceUSD = Math.round(mndyPrice * 100) / 100;
+                data.rsu.valueUSD = Math.round(data.rsu.units * data.rsu.sharePriceUSD);
+                data.rsu.valueILS = Math.round(data.rsu.valueUSD * usdIls);
+                data.rsu.lastUpdated = new Date().toISOString().slice(0, 10);
+                data.totalRSU = data.rsu.valueILS;
+                updated = true;
+                console.log(`MNDY: $${mndyPrice.toFixed(2)} -> RSU $${data.rsu.valueUSD}`);
+              } else {
+                console.log("MNDY: could not fetch, keeping current");
+              }
+            }
+
+            if (!updated) {
+              console.log("No prices updated, skipping");
+              fs.appendFileSync(process.env.GITHUB_OUTPUT, "changed=false\n");
+              return;
+            }
+
+            for (const asset of data.realEstate) {
+              asset.equity = asset.estimatedValue - asset.mortgage;
+            }
+
+            data.totalStocks = data.stocks.reduce((s, st) => s + st.value, 0);
+            data.totalSavings = data.savings.reduce((s, a) => s + a.amount, 0);
+            data.totalRealEstateEquity = data.realEstate.reduce((s, a) => s + a.equity, 0);
+            data.totalNetWorth = data.totalStocks + data.totalSavings + data.totalRealEstateEquity + (data.totalRSU || 0);
+            data.lastUpdated = new Date().toISOString().slice(0, 10);
+
+            fs.writeFileSync(NET_WORTH_PATH, JSON.stringify(data, null, 2) + "\n", "utf-8");
+            fs.appendFileSync(process.env.GITHUB_OUTPUT, "changed=true\n");
+            console.log(`Updated net worth: ILS ${data.totalNetWorth.toLocaleString()}`);
+          }
+
+          main().catch((err) => { console.error(err); process.exit(1); });
+          SCRIPT
+
+      - name: Commit updated prices
+        if: steps.update.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/data/net-worth.json
+          git commit -m "Update stock prices $(date -u +%Y-%m-%d)"
+          git push
+
+      - name: Build site
+        if: steps.update.outputs.changed == 'true'
+        run: |
+          npm ci
+          npm run build
+
+      - uses: actions/configure-pages@v5
+        if: steps.update.outputs.changed == 'true'
+
+      - uses: actions/upload-pages-artifact@v3
+        if: steps.update.outputs.changed == 'true'
+        with:
+          path: out
+
+      - id: deployment
+        if: steps.update.outputs.changed == 'true'
+        uses: actions/deploy-pages@v4
