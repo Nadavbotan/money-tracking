@@ -6,12 +6,12 @@
       "name": "MTF Indxx Bitcoin Reference",
       "shares": 1674,
       "avgCostILS": 0.67,
-      "currentPriceILS": 0.65,
+      "currentPriceILS": 0.64,
       "currency": "ILS",
       "btcPriceRatio": 0.000003021,
-      "value": 1088,
-      "gainLoss": -34,
-      "gainLossPercent": -2.99,
+      "value": 1071,
+      "gainLoss": -51,
+      "gainLossPercent": -4.51,
       "lastUpdated": "2026-05-27"
     },
     {
@@ -20,11 +20,11 @@
       "shares": 7.44,
       "avgCostUSD": 525.97,
       "avgCostILS": 1914,
-      "currentPriceILS": 1956.66,
+      "currentPriceILS": 1950.05,
       "currency": "USD",
-      "value": 14558,
-      "gainLoss": 318,
-      "gainLossPercent": 2.23,
+      "value": 14508,
+      "gainLoss": 268,
+      "gainLossPercent": 1.88,
       "lastUpdated": "2026-05-27"
     },
     {
@@ -33,11 +33,11 @@
       "shares": 42.3,
       "avgCostUSD": 535.81,
       "avgCostILS": 1950,
-      "currentPriceILS": 2138.2,
+      "currentPriceILS": 2131.21,
       "currency": "USD",
-      "value": 90446,
-      "gainLoss": 7961,
-      "gainLossPercent": 9.65,
+      "value": 90150,
+      "gainLoss": 7665,
+      "gainLossPercent": 9.29,
       "lastUpdated": "2026-05-27"
     }
   ],
@@ -51,14 +51,14 @@
   "rsu": {
     "company": "monday.com",
     "units": 237,
-    "sharePriceUSD": 76.83,
-    "valueUSD": 18209,
-    "valueILS": 51635,
+    "sharePriceUSD": 76.42,
+    "valueUSD": 18112,
+    "valueILS": 51188,
     "lastUpdated": "2026-05-27"
   },
-  "totalStocks": 106092,
+  "totalStocks": 105729,
   "totalSavings": 50000,
   "totalRealEstateEquity": 0,
-  "totalRSU": 51635,
-  "totalNetWorth": 207727
+  "totalRSU": 51188,
+  "totalNetWorth": 206917
 }
