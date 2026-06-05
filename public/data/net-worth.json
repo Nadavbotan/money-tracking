@@ -1,18 +1,18 @@
 {
-  "lastUpdated": "2026-06-04",
+  "lastUpdated": "2026-06-05",
   "stocks": [
     {
       "ticker": "5139886",
       "name": "MTF Indxx Bitcoin Reference",
       "shares": 1674,
       "avgCostILS": 0.67,
-      "currentPriceILS": 0.56,
+      "currentPriceILS": 0.53,
       "currency": "ILS",
       "btcPriceRatio": 0.000003021,
-      "value": 937,
-      "gainLoss": -185,
-      "gainLossPercent": -16.46,
-      "lastUpdated": "2026-06-04"
+      "value": 887,
+      "gainLoss": -235,
+      "gainLossPercent": -20.92,
+      "lastUpdated": "2026-06-05"
     },
     {
       "ticker": "VOO",
@@ -20,12 +20,12 @@
       "shares": 7.44,
       "avgCostUSD": 525.97,
       "avgCostILS": 1914,
-      "currentPriceILS": 2017.7,
+      "currentPriceILS": 2008.56,
       "currency": "USD",
-      "value": 15012,
-      "gainLoss": 772,
-      "gainLossPercent": 5.42,
-      "lastUpdated": "2026-06-04"
+      "value": 14944,
+      "gainLoss": 704,
+      "gainLossPercent": 4.94,
+      "lastUpdated": "2026-06-05"
     },
     {
       "ticker": "IVV",
@@ -33,12 +33,12 @@
       "shares": 42.3,
       "avgCostUSD": 535.81,
       "avgCostILS": 1950,
-      "currentPriceILS": 2204.96,
+      "currentPriceILS": 2194.93,
       "currency": "USD",
-      "value": 93270,
-      "gainLoss": 10785,
-      "gainLossPercent": 13.08,
-      "lastUpdated": "2026-06-04"
+      "value": 92846,
+      "gainLoss": 10361,
+      "gainLossPercent": 12.56,
+      "lastUpdated": "2026-06-05"
     }
   ],
   "savings": [
@@ -51,14 +51,14 @@
   "rsu": {
     "company": "monday.com",
     "units": 237,
-    "sharePriceUSD": 87.38,
-    "valueUSD": 20709,
-    "valueILS": 60006,
-    "lastUpdated": "2026-06-04"
+    "sharePriceUSD": 85.91,
+    "valueUSD": 20361,
+    "valueILS": 60236,
+    "lastUpdated": "2026-06-05"
   },
-  "totalStocks": 109219,
+  "totalStocks": 108677,
   "totalSavings": 50000,
   "totalRealEstateEquity": 0,
-  "totalRSU": 60006,
-  "totalNetWorth": 219225
+  "totalRSU": 60236,
+  "totalNetWorth": 218913
 }
