@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-18",
+  "lastUpdated": "2026-06-19",
   "stocks": [
     {
       "ticker": "5139886",
@@ -12,7 +12,7 @@
       "value": 937,
       "gainLoss": -185,
       "gainLossPercent": -16.46,
-      "lastUpdated": "2026-06-18"
+      "lastUpdated": "2026-06-19"
     },
     {
       "ticker": "VOO",
@@ -20,12 +20,12 @@
       "shares": 7.44,
       "avgCostUSD": 525.97,
       "avgCostILS": 1914,
-      "currentPriceILS": 2023.16,
+      "currentPriceILS": 2035.29,
       "currency": "USD",
-      "value": 15052,
-      "gainLoss": 812,
-      "gainLossPercent": 5.7,
-      "lastUpdated": "2026-06-18"
+      "value": 15143,
+      "gainLoss": 903,
+      "gainLossPercent": 6.34,
+      "lastUpdated": "2026-06-19"
     },
     {
       "ticker": "IVV",
@@ -33,12 +33,12 @@
       "shares": 42.3,
       "avgCostUSD": 535.81,
       "avgCostILS": 1950,
-      "currentPriceILS": 2205.72,
+      "currentPriceILS": 2218.68,
       "currency": "USD",
-      "value": 93302,
-      "gainLoss": 10817,
-      "gainLossPercent": 13.11,
-      "lastUpdated": "2026-06-18"
+      "value": 93850,
+      "gainLoss": 11365,
+      "gainLossPercent": 13.78,
+      "lastUpdated": "2026-06-19"
     }
   ],
   "savings": [
@@ -53,12 +53,12 @@
     "units": 237,
     "sharePriceUSD": 71.53,
     "valueUSD": 16953,
-    "valueILS": 49847,
-    "lastUpdated": "2026-06-18"
+    "valueILS": 50144,
+    "lastUpdated": "2026-06-19"
   },
-  "totalStocks": 109291,
+  "totalStocks": 109930,
   "totalSavings": 50000,
   "totalRealEstateEquity": 0,
-  "totalRSU": 49847,
-  "totalNetWorth": 209138
+  "totalRSU": 50144,
+  "totalNetWorth": 210074
 }
