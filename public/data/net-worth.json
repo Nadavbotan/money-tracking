@@ -1,18 +1,18 @@
 {
-  "lastUpdated": "2026-07-07",
+  "lastUpdated": "2026-07-08",
   "stocks": [
     {
       "ticker": "5139886",
       "name": "MTF Indxx Bitcoin Reference",
       "shares": 1674,
       "avgCostILS": 0.67,
-      "currentPriceILS": 0.59,
+      "currentPriceILS": 0.57,
       "currency": "ILS",
       "btcPriceRatio": 0.000003021,
-      "value": 988,
-      "gainLoss": -134,
-      "gainLossPercent": -11.91,
-      "lastUpdated": "2026-07-07"
+      "value": 954,
+      "gainLoss": -168,
+      "gainLossPercent": -14.94,
+      "lastUpdated": "2026-07-08"
     },
     {
       "ticker": "VOO",
@@ -20,12 +20,12 @@
       "shares": 7.44,
       "avgCostUSD": 525.97,
       "avgCostILS": 1914,
-      "currentPriceILS": 2089.08,
+      "currentPriceILS": 2078.77,
       "currency": "USD",
-      "value": 15543,
-      "gainLoss": 1303,
-      "gainLossPercent": 9.15,
-      "lastUpdated": "2026-07-07"
+      "value": 15466,
+      "gainLoss": 1226,
+      "gainLossPercent": 8.61,
+      "lastUpdated": "2026-07-08"
     },
     {
       "ticker": "IVV",
@@ -33,12 +33,12 @@
       "shares": 42.3,
       "avgCostUSD": 535.81,
       "avgCostILS": 1950,
-      "currentPriceILS": 2283.4,
+      "currentPriceILS": 2272.27,
       "currency": "USD",
-      "value": 96588,
-      "gainLoss": 14103,
-      "gainLossPercent": 17.1,
-      "lastUpdated": "2026-07-07"
+      "value": 96117,
+      "gainLoss": 13632,
+      "gainLossPercent": 16.53,
+      "lastUpdated": "2026-07-08"
     }
   ],
   "savings": [
@@ -51,14 +51,14 @@
   "rsu": {
     "company": "monday.com",
     "units": 237,
-    "sharePriceUSD": 83.89,
-    "valueUSD": 19882,
-    "valueILS": 60517,
-    "lastUpdated": "2026-07-07"
+    "sharePriceUSD": 80.91,
+    "valueUSD": 19176,
+    "valueILS": 58234,
+    "lastUpdated": "2026-07-08"
   },
-  "totalStocks": 113119,
+  "totalStocks": 112537,
   "totalSavings": 50000,
   "totalRealEstateEquity": 0,
-  "totalRSU": 60517,
-  "totalNetWorth": 223636
+  "totalRSU": 58234,
+  "totalNetWorth": 220771
 }
