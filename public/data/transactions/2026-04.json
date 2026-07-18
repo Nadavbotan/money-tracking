@@ -1747,7 +1747,21 @@
     "source": "local",
     "type": "expense",
     "transaction_type": "regular",
-    "reference": "2612185513387"
+    "reference": ""
+  },
+  {
+    "id": "bank-rent-20260501-rent-7085",
+    "date": "2026-05-01",
+    "merchant": "שכר דירה",
+    "amount": 7085,
+    "charged_amount": 7085,
+    "currency": "ILS",
+    "category": "rent",
+    "card": "bank",
+    "source": "local",
+    "type": "expense",
+    "transaction_type": "regular",
+    "reference": ""
   },
   {
     "id": "4330-20260503-pmam_-36.5",
@@ -1789,7 +1803,7 @@
     "source": "local",
     "type": "expense",
     "transaction_type": "regular",
-    "reference": "34685693"
+    "reference": ""
   },
   {
     "id": "bank-rent-20260503-rent-7085",
@@ -1808,7 +1822,7 @@
   {
     "id": "bank-expense-20260503-_-400",
     "date": "2026-05-03",
-    "merchant": "שר נועה",
+    "merchant": "העברה יוצאת",
     "amount": 400,
     "charged_amount": 400,
     "currency": "ILS",
@@ -1817,7 +1831,7 @@
     "source": "local",
     "type": "expense",
     "transaction_type": "regular",
-    "reference": "456477727"
+    "reference": ""
   },
   {
     "id": "9143-20260504-ragazzi-267",
@@ -1906,21 +1920,21 @@
   {
     "id": "bank-expense-20260508-_-7600",
     "date": "2026-05-08",
-    "merchant": "\"גני שובבני\"  ציגלמן בטי",
+    "merchant": "העברה יוצאת",
     "amount": 7600,
     "charged_amount": 7600,
     "currency": "ILS",
-    "category": "kids_daycare",
+    "category": "transfers",
     "card": "bank",
     "source": "local",
     "type": "expense",
     "transaction_type": "regular",
-    "reference": "457879992"
+    "reference": ""
   },
   {
     "id": "bank-expense-20260508-_-9955.49",
     "date": "2026-05-08",
-    "merchant": "חיסכון טיסה",
+    "merchant": "קניית מט\"ח",
     "amount": 9955.49,
     "charged_amount": 9955.49,
     "currency": "ILS",
@@ -1929,6 +1943,6 @@
     "source": "local",
     "type": "expense",
     "transaction_type": "regular",
-    "reference": "10832"
+    "reference": ""
   }
 ]

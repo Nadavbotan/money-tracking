@@ -1,18 +1,18 @@
 {
-  "lastUpdated": "2026-07-17",
+  "lastUpdated": "2026-07-18",
   "stocks": [
     {
       "ticker": "5139886",
       "name": "MTF Indxx Bitcoin Reference",
       "shares": 1674,
       "avgCostILS": 0.67,
-      "currentPriceILS": 0.59,
+      "currentPriceILS": 0.65,
       "currency": "ILS",
       "btcPriceRatio": 0.000003021,
-      "value": 988,
-      "gainLoss": -134,
-      "gainLossPercent": -11.91,
-      "lastUpdated": "2026-07-17"
+      "value": 1088,
+      "gainLoss": -34,
+      "gainLossPercent": -2.99,
+      "lastUpdated": "2026-07-18"
     },
     {
       "ticker": "VOO",
@@ -20,12 +20,12 @@
       "shares": 7.44,
       "avgCostUSD": 525.97,
       "avgCostILS": 1914,
-      "currentPriceILS": 2080.35,
+      "currentPriceILS": 2076.02,
       "currency": "USD",
-      "value": 15478,
-      "gainLoss": 1238,
-      "gainLossPercent": 8.69,
-      "lastUpdated": "2026-07-17"
+      "value": 15446,
+      "gainLoss": 1206,
+      "gainLossPercent": 8.47,
+      "lastUpdated": "2026-07-18"
     },
     {
       "ticker": "IVV",
@@ -33,32 +33,38 @@
       "shares": 42.3,
       "avgCostUSD": 535.81,
       "avgCostILS": 1950,
-      "currentPriceILS": 2274.02,
+      "currentPriceILS": 2269.13,
       "currency": "USD",
-      "value": 96191,
-      "gainLoss": 13706,
-      "gainLossPercent": 16.62,
-      "lastUpdated": "2026-07-17"
+      "value": 95984,
+      "gainLoss": 13499,
+      "gainLossPercent": 16.37,
+      "lastUpdated": "2026-07-18"
     }
   ],
   "savings": [
     {
-      "name": "חיסכון צד",
-      "amount": 50000
+      "name": "רכב חדש (אי.בי.אי כספית)",
+      "amount": 65000,
+      "color": "#f59e0b"
+    },
+    {
+      "name": "חיסכון (אי.בי.אי כספית)",
+      "amount": 15634.05,
+      "color": "#10b981"
     }
   ],
   "realEstate": [],
   "rsu": {
     "company": "monday.com",
-    "units": 237,
-    "sharePriceUSD": 78.43,
-    "valueUSD": 18588,
-    "valueILS": 56511,
-    "lastUpdated": "2026-07-17"
+    "units": 33,
+    "sharePriceUSD": 78.69,
+    "valueUSD": 2597,
+    "valueILS": 7892,
+    "lastUpdated": "2026-07-18"
   },
-  "totalStocks": 112657,
-  "totalSavings": 50000,
+  "totalStocks": 112518,
+  "totalSavings": 80634.05,
   "totalRealEstateEquity": 0,
-  "totalRSU": 56511,
-  "totalNetWorth": 219168
+  "totalRSU": 7892,
+  "totalNetWorth": 201044.05
 }

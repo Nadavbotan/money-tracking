@@ -176,8 +176,66 @@ export function NetWorthPage({ data }: NetWorthPageProps) {
         </div>
       )}
 
-      {/* Savings */}
-      {data.savings.length > 0 && (
+      {/* Savings breakdown */}
+      {data.savings.length > 1 && (
+        <div className="bg-gray-900 border border-gray-800 rounded-2xl p-4">
+          <h3 className="text-sm font-semibold text-gray-300 mb-3">פילוח חסכונות</h3>
+          <div dir="ltr">
+            <ResponsiveContainer width="100%" height={200}>
+              <PieChart>
+                <Pie
+                  data={data.savings.map((account, i) => ({
+                    name: account.name,
+                    value: account.amount,
+                    color: account.color || ["#10b981", "#f59e0b", "#3b82f6", "#a78bfa"][i % 4],
+                  }))}
+                  dataKey="value"
+                  nameKey="name"
+                  cx="50%"
+                  cy="50%"
+                  innerRadius={55}
+                  outerRadius={85}
+                  paddingAngle={3}
+                  strokeWidth={0}
+                >
+                  {data.savings.map((account, i) => (
+                    <Cell
+                      key={i}
+                      fill={account.color || ["#10b981", "#f59e0b", "#3b82f6", "#a78bfa"][i % 4]}
+                    />
+                  ))}
+                </Pie>
+                <Tooltip
+                  formatter={(value) => [formatCurrency(Number(value))]}
+                  {...tooltipStyle}
+                />
+              </PieChart>
+            </ResponsiveContainer>
+          </div>
+          <div className="space-y-2 mt-3">
+            {data.savings.map((account, i) => (
+              <div key={i} className="flex items-center justify-between gap-2">
+                <div className="flex items-center gap-2 min-w-0">
+                  <div
+                    className="w-2.5 h-2.5 rounded-full shrink-0"
+                    style={{
+                      backgroundColor:
+                        account.color || ["#10b981", "#f59e0b", "#3b82f6", "#a78bfa"][i % 4],
+                    }}
+                  />
+                  <span className="text-xs text-gray-400 truncate">{account.name}</span>
+                </div>
+                <span className="text-xs font-bold text-gray-200 shrink-0">
+                  {formatCurrency(account.amount)}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Savings list (single account fallback) */}
+      {data.savings.length === 1 && (
         <div className="bg-gray-900 border border-gray-800 rounded-2xl p-4">
           <h3 className="text-sm font-semibold text-gray-300 mb-3">חסכונות</h3>
           <div className="space-y-2.5">

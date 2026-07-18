@@ -65,6 +65,7 @@ export interface StockHolding {
 export interface SavingsAccount {
   name: string;
   amount: number;
+  color?: string;
 }
 
 export interface RealEstateAsset {
