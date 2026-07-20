@@ -1,18 +1,18 @@
 {
-  "lastUpdated": "2026-07-18",
+  "lastUpdated": "2026-07-20",
   "stocks": [
     {
       "ticker": "5139886",
       "name": "MTF Indxx Bitcoin Reference",
       "shares": 1674,
       "avgCostILS": 0.67,
-      "currentPriceILS": 0.65,
+      "currentPriceILS": 0.6,
       "currency": "ILS",
       "btcPriceRatio": 0.000003021,
-      "value": 1088,
-      "gainLoss": -34,
-      "gainLossPercent": -2.99,
-      "lastUpdated": "2026-07-18"
+      "value": 1004,
+      "gainLoss": -118,
+      "gainLossPercent": -10.48,
+      "lastUpdated": "2026-07-20"
     },
     {
       "ticker": "VOO",
@@ -20,12 +20,12 @@
       "shares": 7.44,
       "avgCostUSD": 525.97,
       "avgCostILS": 1914,
-      "currentPriceILS": 2076.02,
+      "currentPriceILS": 2084.48,
       "currency": "USD",
-      "value": 15446,
-      "gainLoss": 1206,
-      "gainLossPercent": 8.47,
-      "lastUpdated": "2026-07-18"
+      "value": 15509,
+      "gainLoss": 1269,
+      "gainLossPercent": 8.91,
+      "lastUpdated": "2026-07-20"
     },
     {
       "ticker": "IVV",
@@ -33,12 +33,12 @@
       "shares": 42.3,
       "avgCostUSD": 535.81,
       "avgCostILS": 1950,
-      "currentPriceILS": 2269.13,
+      "currentPriceILS": 2278.47,
       "currency": "USD",
-      "value": 95984,
-      "gainLoss": 13499,
-      "gainLossPercent": 16.37,
-      "lastUpdated": "2026-07-18"
+      "value": 96379,
+      "gainLoss": 13894,
+      "gainLossPercent": 16.84,
+      "lastUpdated": "2026-07-20"
     }
   ],
   "savings": [
@@ -57,14 +57,14 @@
   "rsu": {
     "company": "monday.com",
     "units": 33,
-    "sharePriceUSD": 78.69,
-    "valueUSD": 2597,
-    "valueILS": 7892,
-    "lastUpdated": "2026-07-18"
+    "sharePriceUSD": 77.85,
+    "valueUSD": 2569,
+    "valueILS": 7845,
+    "lastUpdated": "2026-07-20"
   },
-  "totalStocks": 112518,
+  "totalStocks": 112892,
   "totalSavings": 80634.05,
   "totalRealEstateEquity": 0,
-  "totalRSU": 7892,
-  "totalNetWorth": 201044.05
+  "totalRSU": 7845,
+  "totalNetWorth": 201371.05
 }
