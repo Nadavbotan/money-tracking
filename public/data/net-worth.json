@@ -1,18 +1,18 @@
 {
-  "lastUpdated": "2026-07-27",
+  "lastUpdated": "2026-07-28",
   "stocks": [
     {
       "ticker": "5139886",
       "name": "MTF Indxx Bitcoin Reference",
       "shares": 1674,
       "avgCostILS": 0.67,
-      "currentPriceILS": 0.6,
+      "currentPriceILS": 0.59,
       "currency": "ILS",
       "btcPriceRatio": 0.000003021,
-      "value": 1004,
-      "gainLoss": -118,
-      "gainLossPercent": -10.48,
-      "lastUpdated": "2026-07-27"
+      "value": 988,
+      "gainLoss": -134,
+      "gainLossPercent": -11.91,
+      "lastUpdated": "2026-07-28"
     },
     {
       "ticker": "VOO",
@@ -20,12 +20,12 @@
       "shares": 7.44,
       "avgCostUSD": 525.97,
       "avgCostILS": 1914,
-      "currentPriceILS": 2074.39,
+      "currentPriceILS": 2078.92,
       "currency": "USD",
-      "value": 15433,
-      "gainLoss": 1193,
-      "gainLossPercent": 8.38,
-      "lastUpdated": "2026-07-27"
+      "value": 15467,
+      "gainLoss": 1227,
+      "gainLossPercent": 8.62,
+      "lastUpdated": "2026-07-28"
     },
     {
       "ticker": "IVV",
@@ -33,12 +33,12 @@
       "shares": 42.3,
       "avgCostUSD": 535.81,
       "avgCostILS": 1950,
-      "currentPriceILS": 2267.4,
+      "currentPriceILS": 2272.41,
       "currency": "USD",
-      "value": 95911,
-      "gainLoss": 13426,
-      "gainLossPercent": 16.28,
-      "lastUpdated": "2026-07-27"
+      "value": 96123,
+      "gainLoss": 13638,
+      "gainLossPercent": 16.53,
+      "lastUpdated": "2026-07-28"
     }
   ],
   "savings": [
@@ -57,14 +57,14 @@
   "rsu": {
     "company": "monday.com",
     "units": 33,
-    "sharePriceUSD": 82.53,
-    "valueUSD": 2723,
-    "valueILS": 8311,
-    "lastUpdated": "2026-07-27"
+    "sharePriceUSD": 86.9,
+    "valueUSD": 2868,
+    "valueILS": 8748,
+    "lastUpdated": "2026-07-28"
   },
-  "totalStocks": 112348,
+  "totalStocks": 112578,
   "totalSavings": 80634.05,
   "totalRealEstateEquity": 0,
-  "totalRSU": 8311,
-  "totalNetWorth": 201293.05
+  "totalRSU": 8748,
+  "totalNetWorth": 201960.05
 }
