@@ -1,18 +1,18 @@
 {
-  "lastUpdated": "2026-08-05",
+  "lastUpdated": "2026-08-06",
   "stocks": [
     {
       "ticker": "5139886",
       "name": "MTF Indxx Bitcoin Reference",
       "shares": 1674,
       "avgCostILS": 0.67,
-      "currentPriceILS": 0.59,
+      "currentPriceILS": 0.58,
       "currency": "ILS",
       "btcPriceRatio": 0.000003021,
-      "value": 988,
-      "gainLoss": -134,
-      "gainLossPercent": -11.91,
-      "lastUpdated": "2026-08-05"
+      "value": 971,
+      "gainLoss": -151,
+      "gainLossPercent": -13.43,
+      "lastUpdated": "2026-08-06"
     },
     {
       "ticker": "VOO",
@@ -20,12 +20,12 @@
       "shares": 7.44,
       "avgCostUSD": 525.97,
       "avgCostILS": 1914,
-      "currentPriceILS": 2133.55,
+      "currentPriceILS": 2130.36,
       "currency": "USD",
-      "value": 15874,
-      "gainLoss": 1634,
-      "gainLossPercent": 11.47,
-      "lastUpdated": "2026-08-05"
+      "value": 15850,
+      "gainLoss": 1610,
+      "gainLossPercent": 11.3,
+      "lastUpdated": "2026-08-06"
     },
     {
       "ticker": "IVV",
@@ -33,12 +33,12 @@
       "shares": 42.3,
       "avgCostUSD": 535.81,
       "avgCostILS": 1950,
-      "currentPriceILS": 2331.97,
+      "currentPriceILS": 2328.59,
       "currency": "USD",
-      "value": 98642,
-      "gainLoss": 16157,
-      "gainLossPercent": 19.59,
-      "lastUpdated": "2026-08-05"
+      "value": 98499,
+      "gainLoss": 16014,
+      "gainLossPercent": 19.41,
+      "lastUpdated": "2026-08-06"
     }
   ],
   "savings": [
@@ -57,14 +57,14 @@
   "rsu": {
     "company": "monday.com",
     "units": 33,
-    "sharePriceUSD": 91.54,
-    "valueUSD": 3021,
-    "valueILS": 9085,
-    "lastUpdated": "2026-08-05"
+    "sharePriceUSD": 87.57,
+    "valueUSD": 2890,
+    "valueILS": 8716,
+    "lastUpdated": "2026-08-06"
   },
-  "totalStocks": 115504,
+  "totalStocks": 115320,
   "totalSavings": 80634.05,
   "totalRealEstateEquity": 0,
-  "totalRSU": 9085,
-  "totalNetWorth": 205223.05
+  "totalRSU": 8716,
+  "totalNetWorth": 204670.05
 }
