@@ -1,18 +1,18 @@
 {
-  "lastUpdated": "2026-08-26",
+  "lastUpdated": "2026-08-28",
   "stocks": [
     {
       "ticker": "5139886",
       "name": "MTF Indxx Bitcoin Reference",
       "shares": 1674,
       "avgCostILS": 0.67,
-      "currentPriceILS": 0.71,
+      "currentPriceILS": 0.72,
       "currency": "ILS",
       "btcPriceRatio": 0.000003021,
-      "value": 1189,
-      "gainLoss": 67,
-      "gainLossPercent": 6.01,
-      "lastUpdated": "2026-08-26"
+      "value": 1205,
+      "gainLoss": 83,
+      "gainLossPercent": 7.44,
+      "lastUpdated": "2026-08-28"
     },
     {
       "ticker": "VOO",
@@ -20,12 +20,12 @@
       "shares": 7.44,
       "avgCostUSD": 525.97,
       "avgCostILS": 1914,
-      "currentPriceILS": 2097.32,
+      "currentPriceILS": 2099.32,
       "currency": "USD",
-      "value": 15604,
-      "gainLoss": 1364,
-      "gainLossPercent": 9.58,
-      "lastUpdated": "2026-08-26"
+      "value": 15619,
+      "gainLoss": 1379,
+      "gainLossPercent": 9.68,
+      "lastUpdated": "2026-08-28"
     },
     {
       "ticker": "IVV",
@@ -33,12 +33,12 @@
       "shares": 42.3,
       "avgCostUSD": 535.81,
       "avgCostILS": 1950,
-      "currentPriceILS": 2292.39,
+      "currentPriceILS": 2294.81,
       "currency": "USD",
-      "value": 96968,
-      "gainLoss": 14483,
-      "gainLossPercent": 17.56,
-      "lastUpdated": "2026-08-26"
+      "value": 97070,
+      "gainLoss": 14585,
+      "gainLossPercent": 17.68,
+      "lastUpdated": "2026-08-28"
     }
   ],
   "savings": [
@@ -57,14 +57,14 @@
   "rsu": {
     "company": "monday.com",
     "units": 33,
-    "sharePriceUSD": 91.95,
-    "valueUSD": 3034,
-    "valueILS": 9028,
-    "lastUpdated": "2026-08-26"
+    "sharePriceUSD": 99.51,
+    "valueUSD": 3284,
+    "valueILS": 9727,
+    "lastUpdated": "2026-08-28"
   },
-  "totalStocks": 113761,
+  "totalStocks": 113894,
   "totalSavings": 80634.05,
   "totalRealEstateEquity": 0,
-  "totalRSU": 9028,
-  "totalNetWorth": 203423.05
+  "totalRSU": 9727,
+  "totalNetWorth": 204255.05
 }
