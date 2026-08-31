@@ -1,18 +1,18 @@
 {
-  "lastUpdated": "2026-08-29",
+  "lastUpdated": "2026-08-31",
   "stocks": [
     {
       "ticker": "5139886",
       "name": "MTF Indxx Bitcoin Reference",
       "shares": 1674,
       "avgCostILS": 0.67,
-      "currentPriceILS": 0.7,
+      "currentPriceILS": 0.71,
       "currency": "ILS",
       "btcPriceRatio": 0.000003021,
-      "value": 1172,
-      "gainLoss": 50,
-      "gainLossPercent": 4.5,
-      "lastUpdated": "2026-08-29"
+      "value": 1189,
+      "gainLoss": 67,
+      "gainLossPercent": 6.01,
+      "lastUpdated": "2026-08-31"
     },
     {
       "ticker": "VOO",
@@ -20,12 +20,12 @@
       "shares": 7.44,
       "avgCostUSD": 525.97,
       "avgCostILS": 1914,
-      "currentPriceILS": 2119.95,
+      "currentPriceILS": 2109.03,
       "currency": "USD",
-      "value": 15772,
-      "gainLoss": 1532,
-      "gainLossPercent": 10.76,
-      "lastUpdated": "2026-08-29"
+      "value": 15691,
+      "gainLoss": 1451,
+      "gainLossPercent": 10.19,
+      "lastUpdated": "2026-08-31"
     },
     {
       "ticker": "IVV",
@@ -33,12 +33,12 @@
       "shares": 42.3,
       "avgCostUSD": 535.81,
       "avgCostILS": 1950,
-      "currentPriceILS": 2317.07,
+      "currentPriceILS": 2306.05,
       "currency": "USD",
-      "value": 98012,
-      "gainLoss": 15527,
-      "gainLossPercent": 18.82,
-      "lastUpdated": "2026-08-29"
+      "value": 97546,
+      "gainLoss": 15061,
+      "gainLossPercent": 18.26,
+      "lastUpdated": "2026-08-31"
     }
   ],
   "savings": [
@@ -57,14 +57,14 @@
   "rsu": {
     "company": "monday.com",
     "units": 33,
-    "sharePriceUSD": 100.71,
-    "valueUSD": 3323,
-    "valueILS": 9961,
-    "lastUpdated": "2026-08-29"
+    "sharePriceUSD": 101.14,
+    "valueUSD": 3338,
+    "valueILS": 9987,
+    "lastUpdated": "2026-08-31"
   },
-  "totalStocks": 114956,
+  "totalStocks": 114426,
   "totalSavings": 80634.05,
   "totalRealEstateEquity": 0,
-  "totalRSU": 9961,
-  "totalNetWorth": 205551.05
+  "totalRSU": 9987,
+  "totalNetWorth": 205047.05
 }
