@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-31",
+  "lastUpdated": "2026-09-01",
   "stocks": [
     {
       "ticker": "5139886",
@@ -12,7 +12,7 @@
       "value": 1189,
       "gainLoss": 67,
       "gainLossPercent": 6.01,
-      "lastUpdated": "2026-08-31"
+      "lastUpdated": "2026-09-01"
     },
     {
       "ticker": "VOO",
@@ -20,12 +20,12 @@
       "shares": 7.44,
       "avgCostUSD": 525.97,
       "avgCostILS": 1914,
-      "currentPriceILS": 2109.03,
+      "currentPriceILS": 2126.19,
       "currency": "USD",
-      "value": 15691,
-      "gainLoss": 1451,
-      "gainLossPercent": 10.19,
-      "lastUpdated": "2026-08-31"
+      "value": 15819,
+      "gainLoss": 1579,
+      "gainLossPercent": 11.09,
+      "lastUpdated": "2026-09-01"
     },
     {
       "ticker": "IVV",
@@ -33,12 +33,12 @@
       "shares": 42.3,
       "avgCostUSD": 535.81,
       "avgCostILS": 1950,
-      "currentPriceILS": 2306.05,
+      "currentPriceILS": 2323.73,
       "currency": "USD",
-      "value": 97546,
-      "gainLoss": 15061,
-      "gainLossPercent": 18.26,
-      "lastUpdated": "2026-08-31"
+      "value": 98294,
+      "gainLoss": 15809,
+      "gainLossPercent": 19.17,
+      "lastUpdated": "2026-09-01"
     }
   ],
   "savings": [
@@ -57,14 +57,14 @@
   "rsu": {
     "company": "monday.com",
     "units": 33,
-    "sharePriceUSD": 101.14,
-    "valueUSD": 3338,
-    "valueILS": 9987,
-    "lastUpdated": "2026-08-31"
+    "sharePriceUSD": 96.51,
+    "valueUSD": 3185,
+    "valueILS": 9670,
+    "lastUpdated": "2026-09-01"
   },
-  "totalStocks": 114426,
+  "totalStocks": 115302,
   "totalSavings": 80634.05,
   "totalRealEstateEquity": 0,
-  "totalRSU": 9987,
-  "totalNetWorth": 205047.05
+  "totalRSU": 9670,
+  "totalNetWorth": 205606.05
 }
