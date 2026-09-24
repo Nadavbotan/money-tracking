@@ -1,18 +1,18 @@
 {
-  "lastUpdated": "2026-09-23",
+  "lastUpdated": "2026-09-24",
   "stocks": [
     {
       "ticker": "5139886",
       "name": "MTF Indxx Bitcoin Reference",
       "shares": 1674,
       "avgCostILS": 0.67,
-      "currentPriceILS": 0.77,
+      "currentPriceILS": 0.78,
       "currency": "ILS",
       "btcPriceRatio": 0.000003021,
-      "value": 1289,
-      "gainLoss": 167,
-      "gainLossPercent": 14.93,
-      "lastUpdated": "2026-09-23"
+      "value": 1306,
+      "gainLoss": 184,
+      "gainLossPercent": 16.44,
+      "lastUpdated": "2026-09-24"
     },
     {
       "ticker": "VOO",
@@ -20,12 +20,12 @@
       "shares": 7.44,
       "avgCostUSD": 525.97,
       "avgCostILS": 1914,
-      "currentPriceILS": 2148.34,
+      "currentPriceILS": 2152.64,
       "currency": "USD",
-      "value": 15984,
-      "gainLoss": 1744,
-      "gainLossPercent": 12.25,
-      "lastUpdated": "2026-09-23"
+      "value": 16016,
+      "gainLoss": 1776,
+      "gainLossPercent": 12.47,
+      "lastUpdated": "2026-09-24"
     },
     {
       "ticker": "IVV",
@@ -33,12 +33,12 @@
       "shares": 42.3,
       "avgCostUSD": 535.81,
       "avgCostILS": 1950,
-      "currentPriceILS": 2341.47,
+      "currentPriceILS": 2346.38,
       "currency": "USD",
-      "value": 99044,
-      "gainLoss": 16559,
-      "gainLossPercent": 20.08,
-      "lastUpdated": "2026-09-23"
+      "value": 99252,
+      "gainLoss": 16767,
+      "gainLossPercent": 20.33,
+      "lastUpdated": "2026-09-24"
     }
   ],
   "savings": [
@@ -57,14 +57,14 @@
   "rsu": {
     "company": "monday.com",
     "units": 33,
-    "sharePriceUSD": 86.46,
-    "valueUSD": 2853,
-    "valueILS": 8662,
-    "lastUpdated": "2026-09-23"
+    "sharePriceUSD": 86,
+    "valueUSD": 2838,
+    "valueILS": 8641,
+    "lastUpdated": "2026-09-24"
   },
-  "totalStocks": 116317,
+  "totalStocks": 116574,
   "totalSavings": 80634.05,
   "totalRealEstateEquity": 0,
-  "totalRSU": 8662,
-  "totalNetWorth": 205613.05
+  "totalRSU": 8641,
+  "totalNetWorth": 205849.05
 }
