@@ -1,18 +1,18 @@
 {
-  "lastUpdated": "2026-10-02",
+  "lastUpdated": "2026-10-05",
   "stocks": [
     {
       "ticker": "5139886",
       "name": "MTF Indxx Bitcoin Reference",
       "shares": 1674,
       "avgCostILS": 0.67,
-      "currentPriceILS": 0.78,
+      "currentPriceILS": 0.79,
       "currency": "ILS",
       "btcPriceRatio": 0.000003021,
-      "value": 1306,
-      "gainLoss": 184,
-      "gainLossPercent": 16.44,
-      "lastUpdated": "2026-10-02"
+      "value": 1322,
+      "gainLoss": 200,
+      "gainLossPercent": 17.87,
+      "lastUpdated": "2026-10-05"
     },
     {
       "ticker": "VOO",
@@ -20,12 +20,12 @@
       "shares": 7.44,
       "avgCostUSD": 525.97,
       "avgCostILS": 1914,
-      "currentPriceILS": 2160.26,
+      "currentPriceILS": 2177.56,
       "currency": "USD",
-      "value": 16072,
-      "gainLoss": 1832,
-      "gainLossPercent": 12.86,
-      "lastUpdated": "2026-10-02"
+      "value": 16201,
+      "gainLoss": 1961,
+      "gainLossPercent": 13.77,
+      "lastUpdated": "2026-10-05"
     },
     {
       "ticker": "IVV",
@@ -33,12 +33,12 @@
       "shares": 42.3,
       "avgCostUSD": 535.81,
       "avgCostILS": 1950,
-      "currentPriceILS": 2360.43,
+      "currentPriceILS": 2379.11,
       "currency": "USD",
-      "value": 99846,
-      "gainLoss": 17361,
-      "gainLossPercent": 21.05,
-      "lastUpdated": "2026-10-02"
+      "value": 100636,
+      "gainLoss": 18151,
+      "gainLossPercent": 22.01,
+      "lastUpdated": "2026-10-05"
     }
   ],
   "savings": [
@@ -57,14 +57,14 @@
   "rsu": {
     "company": "monday.com",
     "units": 33,
-    "sharePriceUSD": 78.8,
-    "valueUSD": 2600,
-    "valueILS": 7938,
-    "lastUpdated": "2026-10-02"
+    "sharePriceUSD": 82.66,
+    "valueUSD": 2728,
+    "valueILS": 8339,
+    "lastUpdated": "2026-10-05"
   },
-  "totalStocks": 117224,
+  "totalStocks": 118159,
   "totalSavings": 80634.05,
   "totalRealEstateEquity": 0,
-  "totalRSU": 7938,
-  "totalNetWorth": 205796.05
+  "totalRSU": 8339,
+  "totalNetWorth": 207132.05
 }
